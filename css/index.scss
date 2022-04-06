@@ -1,0 +1,103 @@
+@import"_normalize";
+@font-face {
+    font-family: 'Gilroy, sans-serif';
+    src: url('../fonts/Gilroy-Regular.woff2') format('woff2'), url('../fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* 
+
+*/
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* @STONEMAG  top-block*/
+
+.top-block {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/topblock/bg\ img@2x.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    /*  background-size: cover; */
+    background-size: 100% auto;
+    color: #ffffff;
+    // .top-block__header
+    &__header {
+        height: 76px;
+        padding-top: 25px;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.header {
+    // .header__container
+    &__container {}
+}
+
+.header-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Gilroy, sans-serif';
+}
+
+.header-links {
+    // .header-item__link
+    font-size: 1em;
+    text-align: center;
+    &__logo img {
+        display: flex;
+    }
+    &__email {
+        margin: 0px -5px 0px 10px;
+    }
+    &__email::before {
+        content: "";
+        display: block;
+        background: url("../img/header/header-email.svg") no-repeat;
+        background-size: 18px 18px;
+        width: 18px;
+        height: 18px;
+        float: left;
+        margin: 1px 10px 0 0;
+    }
+    &__tel {
+        margin: 0px 10px 0px -5px;
+    }
+    &__tel::before {
+        content: "";
+        display: block;
+        background: url("../img/header/header-phone.svg") no-repeat;
+        background-size: 18px 18px;
+        width: 18px;
+        height: 18px;
+        float: left;
+        margin: 1px 10px 0 0;
+    }
+    &__size {
+        /* line-height: 48px; */
+        padding: 16px 24px;
+        border: 1px solid #FFB75E;
+        border-radius: 26px;
+    }
+}
