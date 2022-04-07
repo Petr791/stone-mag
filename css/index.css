@@ -351,8 +351,16 @@ template {
 
 @font-face {
   font-family: 'PT Serif, serif';
-  src: url("PTSerif-Bold.woff2") format("woff2"), url("PTSerif-Bold.woff") format("woff");
+  src: url("../fonts/PTSerif-Bold.woff2") format("woff2"), url("../fonts/PTSerif-Bold.woff") format("woff");
   font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PT Serif, serif';
+  src: url("../fonts/PTSerif-Regular.woff2") format("woff2"), url("../fonts/PTSerif-Regular.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
@@ -376,12 +384,13 @@ a:visited {
 .top-block {
   width: 100%;
   height: 100vh;
-  background-image: url("../img/topblock/bg img@2x.jpg");
+  min-height: 1019px;
+  background-image: url("../img/topblock/bg_img.jpg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  /*  background-size: cover; */
-  -webkit-background-size: 100% auto;
-          background-size: 100% auto;
+  -webkit-background-size: cover;
+          background-size: cover;
+  /*  background-size: auto auto; */
   color: #ffffff;
 }
 
@@ -467,5 +476,155 @@ a:visited {
   height: 0;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/*  */
+.top-block__info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.top-block__content {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 68.0%;
+      -ms-flex: 0 1 68.0%;
+          flex: 0 1 68.0%;
+  font-family: 'PT Serif, serif';
+  padding-right: 11px;
+}
+
+.top-block__title h1 {
+  font-size: 2.375em;
+  font-weight: 400;
+  line-height: 63px;
+}
+
+.top-block__title h1 span {
+  font-weight: 700;
+}
+
+.top-block__action {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 32px;
+}
+
+.top-block__action-col {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 45%;
+      -ms-flex: 0 1 45%;
+          flex: 0 1 45%;
+  border-left: 4px solid #FFB75E;
+  padding-left: 25px;
+  margin-top: 63px;
+  margin-bottom: 70px;
+}
+
+.top-block__action-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.top-block__discount {
+  font-family: 'Gilroy, sans-serif';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.top-block__discount p {
+  margin-bottom: 3px;
+}
+
+.top-block__arrow {
+  width: 94px;
+  padding-left: 15px;
+}
+
+.top-block__arrow img {
+  width: 100%;
+  /* padding-left: 15px;
+		padding-bottom: 10px; */
+}
+
+.top-block__advantage {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-block__advantage_two {
+  margin-top: 40px;
+}
+
+.top-block__items:first-child {
+  max-width: 280px;
+  /*  margin-bottom: 40px; */
+}
+
+.top-block__items:nth-child(2) {
+  max-width: 222px;
+}
+
+.top-block__items:nth-child(3) {
+  max-width: 222px;
+}
+
+.top-block__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-block__img img {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top-block__benefit {
+  font-family: 'Gilroy, sans-serif';
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 27px;
+  padding-left: 25px;
+}
+
+.top-block__from {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 31.0%;
+      -ms-flex: 0 0 31.0%;
+          flex: 0 0 31.0%;
+  border: 1px solid #FFB75E;
 }
 /*# sourceMappingURL=index.css.map */
