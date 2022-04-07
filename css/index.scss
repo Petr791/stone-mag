@@ -7,6 +7,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'PT Serif, serif';
+    src: url('PTSerif-Bold.woff2') format('woff2'), url('PTSerif-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 /* 
 
@@ -26,8 +34,6 @@ a:visited {
 
 
 /* @STONEMAG  top-block*/
-
-
 
 .top-block {
     width: 100%;
@@ -61,10 +67,6 @@ a:visited {
     justify-content: space-between;
     align-items: center;
     font-family: 'Gilroy, sans-serif';
-}
-
-.header-links {
-    // .header-item__link
     font-size: 1em;
     text-align: center;
     &__logo img {
@@ -102,4 +104,12 @@ a:visited {
         border: 1px solid #FFB75E;
         border-radius: 26px;
     }
+}
+
+.hr-line {
+    margin: 0;
+    padding: 0;
+    height: 0;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }

@@ -349,6 +349,14 @@ template {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'PT Serif, serif';
+  src: url("PTSerif-Bold.woff2") format("woff2"), url("PTSerif-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* 
 
 */
@@ -402,9 +410,6 @@ a:visited {
       -ms-flex-align: center;
           align-items: center;
   font-family: 'Gilroy, sans-serif';
-}
-
-.header-links {
   font-size: 1em;
   text-align: center;
 }
@@ -454,5 +459,13 @@ a:visited {
   border: 1px solid #FFB75E;
   -webkit-border-radius: 26px;
           border-radius: 26px;
+}
+
+.hr-line {
+  margin: 0;
+  padding: 0;
+  height: 0;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 /*# sourceMappingURL=index.css.map */
