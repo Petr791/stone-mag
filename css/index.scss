@@ -32,6 +32,7 @@ html,
 body {
     height: 100%;
     width: 100%;
+    font-family: 'Gilroy, sans-serif';
 }
 
 a,
@@ -42,6 +43,62 @@ a:visited {
 
 
 /* @STONEMAG  top-block*/
+
+.header {
+    position: absolute;
+    width: 100%;
+    /* top: 102px; */
+    /*  z-index: 3; */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    // .header__container
+    &__container {}
+}
+
+.header-block {
+    height: 76px;
+    padding-top: 25px;
+}
+
+.header__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+    text-align: center;
+}
+
+.header__link {}
+
+.header__link--logo {
+    margin-right: 30px;
+    img {
+        display: flex;
+    }
+}
+
+.header__link--block {
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.header__link--email {
+    padding-left: 10px;
+}
+
+.header__link--tel {
+    padding-left: 8px;
+}
+
+.button-header {
+    border: 1px solid #FFB75E;
+    border-radius: 26px;
+    padding: 16px 24px;
+    margin-left: 30px;
+}
+
+
+/*  */
 
 .top-block {
     width: 100%;
@@ -56,10 +113,7 @@ a:visited {
     /*  background-size: auto auto; */
     color: #ffffff;
     // .top-block__header
-    &__header {
-        height: 76px;
-        padding-top: 25px;
-    }
+    &__header {}
 }
 
 .ibg {
@@ -78,63 +132,6 @@ a:visited {
     margin: 0 auto;
 }
 
-.header {
-    // .header__container
-    &__container {}
-}
-
-.header-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Gilroy, sans-serif';
-    font-size: 1em;
-    text-align: center;
-    &__logo img {
-        display: flex;
-    }
-    &__email {
-        margin: 0px -5px 0px 10px;
-    }
-    &__email::before {
-        content: "";
-        display: block;
-        background: url("../img/header/header-email.svg") no-repeat;
-        background-size: 18px 18px;
-        width: 18px;
-        height: 18px;
-        float: left;
-        margin: 1px 10px 0 0;
-    }
-    &__tel {
-        margin: 0px 10px 0px -5px;
-    }
-    &__tel::before {
-        content: "";
-        display: block;
-        background: url("../img/header/header-phone.svg") no-repeat;
-        background-size: 18px 18px;
-        width: 18px;
-        height: 18px;
-        float: left;
-        margin: 1px 8px 0 0;
-    }
-    &__size {
-        /* line-height: 48px; */
-        padding: 16px 24px;
-        border: 1px solid #FFB75E;
-        border-radius: 26px;
-    }
-}
-
-.hr-line {
-    margin: 0;
-    padding: 0;
-    height: 0;
-    border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
-
 
 /*  */
 
@@ -144,18 +141,19 @@ a:visited {
         display: flex;
         justify-content: space-between;
         flex-wrap: nowrap;
-        padding-top: 70px;
+        padding-top: 227px;
         padding-bottom: 70px;
     }
     // .top-block__content
     &__content {
-        flex: 0 1 68.0%;
-        font-family: 'PT Serif, serif';
+        flex: 0 1 67.0%;
         padding-right: 11px;
     }
     // .top-block__title
-    &__title h1 {
-        font-size: 2.375em;
+    &__title h2 {
+        font-family: 'PT Serif, serif';
+        /* font-size: 2.375em; */
+        font-size: 2.2em;
         font-weight: 400;
         line-height: 63px;
         span {
@@ -165,18 +163,20 @@ a:visited {
     // .top-block__action
     &__action {
         display: flex;
+        justify-content: start;
         margin-top: 32px;
     }
     // .top-block__action-col
     &__action-col {
-        flex: 0 1 45%;
+        flex: 0 1 50%;
         border-left: 4px solid #FFB75E;
         padding-left: 25px;
-        margin-top: 63px;
+        margin-top: 65px;
         margin-bottom: 70px;
     }
     // .top-block__action-title
     &__action-title {
+        font-family: 'PT Serif, serif';
         font-size: 24px;
         font-weight: 700;
         margin-top: 8px;
@@ -184,23 +184,24 @@ a:visited {
     }
     // .top-block__discount
     &__discount {
-        font-family: 'Gilroy, sans-serif';
+        /* font-family: 'Gilroy, sans-serif'; */
         font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
+        font-size: 1em;
+        line-height: 24px;
         p {
             margin-bottom: 3px;
         }
     }
     // .top-block__arrow
     &__arrow {
-        width: 94px;
-        padding-left: 15px;
-    }
-    &__arrow img {
-        width: 100%;
-        /* padding-left: 15px;
-		padding-bottom: 10px; */
+        flex: 0 1 94px;
+        padding-left: 41px;
+        img {
+            display: block;
+            width: 100%;
+            /* padding-left: 15px;
+		 padding-bottom: 10px; */
+        }
     }
     // .top-block__advantage
     &__advantage {
@@ -209,18 +210,12 @@ a:visited {
         align-items: center;
     }
     &__advantage_two {
-        margin-top: 40px;
+        margin-top: 36px;
     }
     // .top-block__items
-    &__items:first-child {
-        max-width: 280px;
-        /*  margin-bottom: 40px; */
-    }
+    &__items {}
     &__items:nth-child(2) {
-        max-width: 222px;
-    }
-    &__items:nth-child(3) {
-        max-width: 222px;
+        /* margin-left: 100px; */
     }
     // .top-block__item
     &__item {
@@ -235,15 +230,32 @@ a:visited {
     }
     // .top-block__benefit
     &__benefit {
-        font-family: 'Gilroy, sans-serif';
-        font-weight: 400;
-        font-size: 1em;
-        line-height: 27px;
-        padding-left: 25px;
+        width: 265px;
+        max-width: 265px;
+        p {
+            font-weight: 400;
+            font-size: 1.125em;
+            line-height: 24px;
+            margin: 0;
+            padding-left: 25px;
+        }
     }
     // .top-block__from
     &__from {
-        flex: 0 0 31.0%;
+        flex: 0 1 32.0%;
         border: 1px solid #FFB75E;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(2px);
+        height: 500px;
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            font-size: 40px;
+            letter-spacing: 5px;
+        }
     }
 }
