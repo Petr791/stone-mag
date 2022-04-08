@@ -19,7 +19,7 @@ function ibg() {
 
     }
 } */
-ibg();
+//ibg();
 /* function ibg() {
 
     let ibg = document.getElementById('ibg');
