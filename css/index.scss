@@ -34,6 +34,10 @@ body {
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+}
+
 html,
 body {
     height: 100%;
@@ -142,7 +146,7 @@ a:visited {
     &__info {
         display: flex;
         justify-content: center;
-        padding-top: 173px;
+        padding-top: 192px;
         padding-bottom: 10px;
     }
     // .main-block__content
@@ -272,14 +276,14 @@ a:visited {
     &__title {
         font-family: 'PT Serif, serif';
         font-weight: 400;
-        font-size: 26px;
+        font-size: 1.625em;
         line-height: 36.5px;
         margin-top: 16px;
         margin-bottom: 3px;
     }
     // .main-form__info
     &__info {
-        font-size: 16px;
+        font-size: 1em;
         line-height: 24px;
         font-weight: 400;
         margin-top: 0px;
@@ -296,7 +300,7 @@ a:visited {
     display: flex;
     align-items: center;
     text-align: left;
-    font-size: 14px;
+    font-size: 0.875em;
     line-height: 14px;
     width: 100%;
     margin-bottom: 0px;
@@ -327,7 +331,7 @@ a:visited {
         width: 100%;
         display: none;
         color: #ffffff;
-        font-size: 14px;
+        font-size: 0.875em;
         text-transform: uppercase;
         padding-left: 2px;
     }
@@ -339,7 +343,7 @@ a:visited {
     }
     // .form-item__label2
     &__label2 {
-        font-size: 13px;
+        font-size: 0.8125em;
         line-height: 15.6px;
         color: #A3A3A3;
         a {
@@ -419,11 +423,11 @@ input.form-item__input::placeholder {
     // .input-file__button
     &__button {
         width: 100%;
-        max-width: 285px;
+        /* max-width: 285px; */
         background: transparent;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
         cursor: pointer;
     }
     // .input-file__icon
@@ -435,13 +439,13 @@ input.form-item__input::placeholder {
         display: block, !important;
     }
     &__text {
-        font-size: 16px;
+        font-size: 1em;
         color: #FFB75E;
         line-height: 16px;
         margin-top: 1px;
-        margin-left: -2px;
+        /* margin-left: -2px; */
         span {
-            font-size: 14px;
+            font-size: 0.875em;
             line-height: 14px;
             color: #A3A3A3;
         }
@@ -453,7 +457,7 @@ input.form-item__input::placeholder {
 }
 
 
-/* .form-item--four {} */
+/* @.form-item--four {} */
 
 .input-calculate {
     opacity: 0;
@@ -473,7 +477,7 @@ input.form-item__input::placeholder {
     }
     // .input-calculate__info
     &__info {
-        font-size: 16px;
+        font-size: 1em;
         color: #FFFFFF;
         line-height: 19px;
         letter-spacing: 1px;
@@ -481,17 +485,19 @@ input.form-item__input::placeholder {
         text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35);
         margin-top: 1px;
         span {
-            font-size: 14px;
+            font-size: 0.875em;
             line-height: 17px;
         }
     }
 }
 
 .form-item--five {
-    display: block;
-    width: 100%;
+    /*   display: block;
+    width: 100%; */
+    display: flex;
+    justify-content: start;
     padding: 0px -10px;
-    margin: 0px 0px 0px -2px;
+    margin: 0px 0px 0px 2px;
 }
 
 .form-item__checkbox+label {
@@ -548,8 +554,9 @@ input.form-item__input::placeholder {
         max-width: 1040px;
     }
     .button-header {
-        font-size: 0.6em;
-        padding: 15px 16px;
+        font-size: 0.8em;
+        padding: 15px 24px;
+        margin-left: 10px;
     }
     .main-block__title h2 {
         line-height: 55px;
@@ -562,6 +569,10 @@ input.form-item__input::placeholder {
 @media (max-width: 1130px) {
     .container {
         max-width: 910px;
+    }
+    .button-header {
+        font-size: 0.6em;
+        padding: 15px 20px;
     }
     .main-block__content {
         max-width: 580px;
@@ -577,7 +588,7 @@ input.form-item__input::placeholder {
         }
     }
     .main-form__title {
-        font-size: 18px;
+        font-size: 1.125em;
         line-height: 22px;
         margin-top: 25px;
         margin-bottom: 13px;
@@ -587,9 +598,9 @@ input.form-item__input::placeholder {
         margin-bottom: 20px;
     }
     .input-file__text {
-        font-size: 13px;
+        font-size: 0.8125em;
         span {
-            font-size: 12px;
+            font-size: 0.75em;
         }
     }
     .input-calculate__button2 {
@@ -597,22 +608,20 @@ input.form-item__input::placeholder {
         padding: 10px 19px;
     }
     .input-calculate__info {
-        font-size: 16px;
+        font-size: 1em;
         line-height: 16px;
         span {
-            font-size: 12px;
+            font-size: 0.75em;
             line-height: 14px;
         }
     }
     .form-item--five {
-        display: flex;
-        flex-direction: column;
         width: 100%;
         padding: 0px -10px;
-        margin: 0px 0px 0px -2px;
+        margin: 0px 0px 0px 2px;
     }
     .form-item__label2 {
-        font-size: 10px;
+        font-size: 0.625em;
         display: inline-block;
         a {
             display: inline-block;
