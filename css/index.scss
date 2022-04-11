@@ -62,6 +62,12 @@ a:visited {
 
 .main {}
 
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
 
 /* @STONEMAG  header*/
 
@@ -123,14 +129,8 @@ a:visited {
 
 /* @STONEMAG  main-block*/
 
-.container {
-    width: 100%;
-    max-width: 1170px;
-    margin: 0 auto;
-}
-
 .main-block {
-    background-image: url('../img/topblock/bg_img.jpg');
+    background-image: url('../img/mainblock/bg_img.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -151,7 +151,7 @@ a:visited {
     }
     // .main-block__content
     &__content {
-        flex: 1 1 580px;
+        flex: 0 1 775px;
         padding-right: 11px;
     }
     // .main-block__title
@@ -251,7 +251,7 @@ a:visited {
 /* @  main-form */
 
 .main-form {
-    flex: 0 1 370px;
+    flex: 0 0 370px;
     align-self: center;
     height: 450px;
     border-radius: 10px;
@@ -378,7 +378,7 @@ input.form-item__input::placeholder {
     &::before {
         content: "";
         display: block;
-        background: url("../img/topblock/main-from3.svg") no-repeat;
+        background: url("../img/mainblock/main-from3.svg") no-repeat;
         background-size: 15px 15px;
         width: 15px;
         height: 15px;
@@ -393,7 +393,7 @@ input.form-item__input::placeholder {
     &::before {
         content: "";
         display: block;
-        background: url("../img/topblock/main-from1.svg") no-repeat;
+        background: url("../img/mainblock/main-from1.svg") no-repeat;
         background-size: 15px 15px;
         width: 15px;
         height: 15px;
@@ -529,7 +529,7 @@ input.form-item__input::placeholder {
     border-color: transparent;
     background-color: rgba(255, 255, 255, 0.25);
     /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e"); */
-    background-image: url('../img/topblock/tick.svg');
+    background-image: url('../img/mainblock/tick.svg');
 }
 
 
@@ -547,11 +547,89 @@ input.form-item__input::placeholder {
 }
 
 
+/* 
+
+
+
+
+
+
+
+*/
+
+.advantage {
+    margin-top: 120px;
+    margin-bottom: 120px;
+    // .advantage__container
+    &__container {}
+    // .advantage__title
+    &__title {
+        font-family: 'PT Serif, serif';
+        font-weight: 400;
+        font-size: 2.8125em;
+        color: #0F0F0F;
+        line-height: 130%;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        span {
+            font-weight: 700;
+            color: #FFB75E;
+        }
+    }
+    // .advantage__items
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-between;
+    }
+    // .advantage__item
+    &__item {
+        flex: 0 1 33.33333%;
+        /* max-width: 309px; */
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+    }
+    // .advantage__icon
+    &__icon {
+        width: 100px;
+        height: 100px;
+    }
+    // .advantage__text
+    &__text {
+        display: inline-block;
+        text-align: left;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 150%;
+        color: #444444;
+        margin-left: 25px;
+    }
+}
+
+
+/* 
+
+
+
+
+
+
+
+
+
+*/
+
+
 /* @media */
 
-@media (max-width: 1280px) {
+@media (max-width: 1160px) {
     .container {
-        max-width: 1040px;
+        max-width: 1160px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
     .button-header {
         font-size: 0.8em;
@@ -559,6 +637,7 @@ input.form-item__input::placeholder {
         margin-left: 10px;
     }
     .main-block__title h2 {
+        font-size: 2.175em;
         line-height: 55px;
     }
     .main-block__arrow {
@@ -568,7 +647,9 @@ input.form-item__input::placeholder {
 
 @media (max-width: 1130px) {
     .container {
-        max-width: 910px;
+        max-width: 1010px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
     .button-header {
         font-size: 0.6em;
@@ -578,7 +659,6 @@ input.form-item__input::placeholder {
         max-width: 580px;
     }
     .main-block__title h2 {
-        font-size: 2.175em;
         line-height: 49px;
     }
     .main-block__arrow {
@@ -587,7 +667,7 @@ input.form-item__input::placeholder {
             width: 84px;
         }
     }
-    .main-form__title {
+    /* .main-form__title {
         font-size: 1.125em;
         line-height: 22px;
         margin-top: 25px;
@@ -626,5 +706,8 @@ input.form-item__input::placeholder {
         a {
             display: inline-block;
         }
+    } */
+    .advantage__item {
+        flex: 0 1 50%;
     }
 }
