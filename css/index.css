@@ -1102,6 +1102,241 @@ input.form-item__input::placeholder {
   margin-left: 25px;
 }
 
+/*  */
+.services {
+  background-image: url("../img/services/portfolio-bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+          background-size: cover;
+  padding-top: 55px;
+  padding-bottom: 120px;
+  /*  &__image {
+        width: 370px;
+        height: 250px;
+        position: absolute;
+        top: -9px;
+        left: -30px;
+        opacity: 100%;
+        img {
+            height: 119%;
+            display: flex;
+        }
+    } */
+}
+
+.services__title {
+  font-family: 'PT Serif', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 130%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0F0F0F;
+}
+
+.services__items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-top: 52px;
+  margin: 0 -15px;
+}
+
+.services__item {
+  margin: 15px;
+  -webkit-filter: drop-shadow(0px 7px 9px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 7px 9px rgba(0, 0, 0, 0.25));
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.services__card {
+  width: 370px;
+  height: 250px;
+  /* background-image: url('../img/services/portfolio-1.png'); */
+  position: relative;
+  overflow: hidden;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.services__image {
+  width: 401px;
+  height: 264px;
+  position: absolute;
+  top: -10px;
+  left: -15px;
+}
+
+.services__image--one {
+  background: -webkit-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-1.png");
+  background: -o-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-1.png");
+  background: linear-gradient(40.85deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-1.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: 370px 250px;
+          background-size: 370px 250px;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+.services__image--two {
+  background: -webkit-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-3.png");
+  background: -o-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-3.png");
+  background: linear-gradient(40.85deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-3.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: 370px 250px;
+          background-size: 370px 250px;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+.services__image--three {
+  background: -webkit-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-2.png");
+  background: -o-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-2.png");
+  background: linear-gradient(40.85deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-2.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: 370px 250px;
+          background-size: 370px 250px;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+.services__image--four {
+  background: -webkit-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-4.png");
+  background: -o-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-4.png");
+  background: linear-gradient(40.85deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-4.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: 370px 250px;
+          background-size: 370px 250px;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+.services__image--five {
+  background: -webkit-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-5.png");
+  background: -o-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-5.png");
+  background: linear-gradient(40.85deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-5.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: 370px 250px;
+          background-size: 370px 250px;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+.services__image--six {
+  background: -webkit-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-6.png");
+  background: -o-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-6.png");
+  background: linear-gradient(40.85deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-6.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: 370px 250px;
+          background-size: 370px 250px;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+.services__image--seven {
+  background: -webkit-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-7.png");
+  background: -o-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-7.png");
+  background: linear-gradient(40.85deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-7.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: 370px 250px;
+          background-size: 370px 250px;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+.services__image--eight {
+  background: -webkit-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-8.png");
+  background: -o-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-8.png");
+  background: linear-gradient(40.85deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-8.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: 370px 250px;
+          background-size: 370px 250px;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+.services__image--nine {
+  background: -webkit-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-9.png");
+  background: -o-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-9.png");
+  background: linear-gradient(40.85deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-9.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: 370px 250px;
+          background-size: 370px 250px;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+.services__image--ten {
+  background: -webkit-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-10.png");
+  background: -o-linear-gradient(49.15deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-10.png");
+  background: linear-gradient(40.85deg, rgba(0, 0, 0, 0.6) 20.14%, rgba(0, 0, 0, 0) 61.79%), url("../img/services/portfolio-10.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: 370px 250px;
+          background-size: 370px 250px;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+.services__link h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 130%;
+  letter-spacing: 1.2px;
+  color: #FFFFFF;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  bottom: 22px;
+  left: 30px;
+  margin: 0;
+}
+
+.services__icon {
+  width: 40px;
+  height: 40px;
+  /* border: 2px solid #ffffff;
+        border-radius: 50%; */
+  /* background-image: url('../img/services/Ellipse6.svg'); 
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;*/
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.services__icon img {
+  width: 40px;
+  height: 40px;
+  /*  position: absolute;
+            top: 32%;
+            right: 37%; 
+            padding: 1px 1px 1px 1px;*/
+}
+
 /* 
 
 
