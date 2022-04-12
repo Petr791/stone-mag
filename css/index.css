@@ -415,6 +415,22 @@ a:visited {
   margin: 0 auto;
 }
 
+h2.title {
+  font-family: 'PT Serif, serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 130%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0F0F0F;
+}
+
+h2.title span {
+  font-weight: 700;
+  color: #FFB75E;
+}
+
 /* @STONEMAG  header*/
 .header {
   position: absolute;
@@ -1031,19 +1047,13 @@ input.form-item__input::placeholder {
 
 
 */
+/* @ .advantage */
 .advantage {
   margin-top: 120px;
   margin-bottom: 120px;
 }
 
 .advantage__title {
-  font-family: 'PT Serif, serif';
-  font-weight: 400;
-  font-size: 2.8125em;
-  color: #0F0F0F;
-  line-height: 130%;
-  text-align: center;
-  text-transform: uppercase;
   margin-bottom: 10px;
 }
 
@@ -1102,15 +1112,15 @@ input.form-item__input::placeholder {
   margin-left: 25px;
 }
 
-/*  */
+/*@  .services*/
 .services {
   background-image: url("../img/services/portfolio-bg.png");
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
           background-size: cover;
-  padding-top: 55px;
-  padding-bottom: 120px;
+  margin-top: 55px;
+  margin-bottom: 120px;
   /*  &__image {
         width: 370px;
         height: 250px;
@@ -1126,14 +1136,7 @@ input.form-item__input::placeholder {
 }
 
 .services__title {
-  font-family: 'PT Serif', serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 45px;
-  line-height: 130%;
-  text-align: center;
-  text-transform: uppercase;
-  color: #0F0F0F;
+  margin-top: 96px;
 }
 
 .services__items {
@@ -1148,7 +1151,7 @@ input.form-item__input::placeholder {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  margin-top: 52px;
+  padding-bottom: 100px;
   margin: 0 -15px;
 }
 
@@ -1335,6 +1338,83 @@ input.form-item__input::placeholder {
             top: 32%;
             right: 37%; 
             padding: 1px 1px 1px 1px;*/
+}
+
+/* @ .selection*/
+.selection__title {
+  margin-bottom: 70px;
+}
+
+.selection h3 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 150%;
+  color: #0F0F0F;
+  border-left: 4px solid #FFB75E;
+  padding-left: 16px;
+  margin-bottom: 50px;
+}
+
+.selection__table {
+  padding-bottom: 50px;
+}
+
+.table {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  width: 100%;
+  table-layout: fixed;
+  text-align: left;
+  border-collapse: collapse;
+  background: transparent;
+  margin: 10px;
+  color: #0F0F0F;
+  text-align: center;
+}
+
+.table th {
+  border-bottom: 1px solid #EEEEEE;
+  border-right: 1px solid #EEEEEE;
+  padding: 12px 17px;
+  width: 100%;
+}
+
+.table td {
+  border-bottom: 1px solid #EEEEEE;
+  border-right: 1px solid #EEEEEE;
+  padding: 13px 10px;
+  width: 100%;
+  line-height: 150%;
+}
+
+.table td img {
+  display: inline-block;
+  width: 36px;
+  height: 38px;
+  /*  padding: 1px 0px; */
+  vertical-align: middle;
+}
+
+.table th:last-child {
+  border-right: none;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table td:last-child {
+  border-right: none;
+}
+
+.table tr:hover td {
+  text-decoration: underline;
+}
+
+.table tr td:first-child {
+  text-align: left;
 }
 
 /* 
