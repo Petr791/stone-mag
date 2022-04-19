@@ -112,7 +112,7 @@
 
                         </div>
 
-                        <div class="form">
+                        <div class="form hero-form">
                             <div class="form__inner">
                                 <h3 class="form__title">УЗНАЙТЕ СТОИМОСТЬ</h3>
                                 <p class="form__info">и получите скидку 20% или разделочную доску из камня в подарок!</p>
@@ -669,13 +669,87 @@
                     <div class="btn-selection">
                         <a class="button button--primary" type="button" href="СМОТРЕТЬ КАТАЛОГ КАМНЯ" target="_blank" rel="nofollow">СМОТРЕТЬ КАТАЛОГ КАМНЯ</a>
                     </div>
-
-
                 </div>
+
             </section>
 
-            <section class="x">
+            <section class="action">
+                <div class="container action__container">
+                    <div class="action__content">
+                        <h2 class="title action__title">НЕ ПРОПУСТИТЕ <span>АКЦИЮ!</span></h2>
+                        <div class="action__card">
+                            <picture class="action__icon">
+                                <img src="./img/action/gift-icon.svg" alt="action__icon">
+                            </picture>
+                            <div class="action__benefit">
+                                <p>Получите сертификат на скидку 20%<br> или мойку в подарок!</p>
+                            </div>
+                        </div>
 
+                        <h4>До конца акции осталось:</h4>
+                        <div class="timer action__timer">
+                            <div class="timer__elems">
+                                <div class="timer__elem timer__days">00</div>
+                                <div class="timer__elem timer__hours">00</div>
+                                <div class="timer__elem timer__minutes">00</div>
+                                <!-- <div class="timer__elem timer__seconds">00</div> -->
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form action-form">
+                        <div class="form__inner">
+                            <h3 class="form__title">УЗНАЙТЕ СТОИМОСТЬ</h3>
+                            <p class="form__info">и получите скидку 20% или разделочную доску из камня в подарок!</p>
+                            <form id="form-main" action="" method="post">
+                                <!--input name -->
+                                <label class="form-field form-field--name">                                
+										<input required="1" id="name-input" type="text"  class="form-field__input" />
+										<div class="form-field__placeholder form-field__placeholder--name">ВАШЕ ИМЯ </div>
+									 </label>
+                                <!--input phone -->
+                                <label class="form-field form-field--phone">
+											 <input required="1" id="phone-input" type="tel"  class="form-field__input" />
+											 <div class="form-field__placeholder form-field__placeholder--phone">Номер телефона <span>*</span></div>
+									 </label>
+
+                                <!--input attach -->
+                                <label class="form-field form-field--attach">
+										  <input name="inputFile" type="file" id="input-file" class="input-file">
+										  <label for="input-file" class="input-file__attach">
+											<span class="input-file__icon"> 
+												<img class="input-file__img"  src="./img/form/attach.svg" alt="input-file__icon">  
+											</span>
+											<span class="input-file__text">Прикрепить чертеж <span>(если имеется)</span></span>
+										</label>
+                                </label>
+
+                                <!--input submit -->
+                                <label class="form-field form-field--submit">
+										  <input type="submit" name="inputCalculate" id="input-calculate" class="input-calculate">
+										  <label for="input-calculate" class="input-calculate__submit button--primary">
+										  <span class="input-calculate__info">РАССЧИТАТЬ СТОИМОСТЬ
+											  <span><br>+ забронировать акцию</span></span>
+									  </label>
+                                </label>
+
+                                <!--input agree -->
+                                <!--    <label class="form-field form-field--agree">
+										  <input checked type="checkbox" name="itemCheckbox" class="form-field__checkbox" id="form-checkbox">
+										  <label class="form-field__label--agree" for="form-checkbox">Согласен с &thinsp;<br><a href="политикой конфиденциальности"  target="_blank" rel="nofollow"> политикой конфиденциальности</a></label>
+									  </label> -->
+                                <label class="form-field form-field--agree">
+										  <input checked type="checkbox" name="itemCheckbox" class="form-field__checkbox" id="form-checkbox">
+										  <label class="form-field__label--agree" for="form-checkbox"><a href="политикой конфиденциальности"  target="_blank" rel="nofollow">Согласен c <span>политикой конфиденциальности</span></a></label>
+                                </label>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
 
 
 
