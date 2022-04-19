@@ -1154,13 +1154,15 @@ input.form-field__input::placeholder {
     font-size: 96px;
     line-height: 100%;
     color: #FFB75E;
+    margin: 0 -10px;
 }
 
 .timer__elem {
     position: relative;
+    max-width: 121px;
     min-width: 60px;
-    /* margin-left: 10px;
-    margin-right: 10px; */
+    margin-left: 10px;
+    margin-right: 10px;
     text-align: center;
 }
 
