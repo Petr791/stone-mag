@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // tabs
-function openTabs(evt, cityName) {
+function openTabs(evt, contentTabs) {
     // Declare all variables
     var i, tabcontent, tablinks;
 
@@ -74,7 +74,7 @@ function openTabs(evt, cityName) {
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(contentTabs).style.display = "block";
     evt.currentTarget.className += " active";
 }
 document.getElementById("defaultOpen").click();
