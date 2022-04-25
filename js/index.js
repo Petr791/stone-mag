@@ -56,25 +56,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+
 // tabs
-function openTabs(evt, contentTabs) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
 
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
+const tabButtons = document.querySelectorAll('.tablinks');
+//console.log(tabButtons);
 
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
+const tabs = document.querySelectorAll('.tabcontent');
+//console.log(tabs);
 
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(contentTabs).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-document.getElementById("defaultOpen").click();
+tabButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+
+        //console.log(button.innerText);
+
+        tabs.forEach(tab => {
+            tab.classList.remove('active')
+            if (button.dataset.tabContent === tab.dataset.tabContent) {
+
+                tab.classList.add('active')
+            }
+        })
+    });
+});
