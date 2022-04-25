@@ -50,11 +50,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // вызываем функцию countdownTimer каждую секунду
     timerId = setInterval(countdownTimer, 1000);
 
+})
 
 
 
 
-});
+
 
 
 // tabs
@@ -66,9 +67,19 @@ const tabs = document.querySelectorAll('.tabcontent');
 //console.log(tabs);
 
 tabButtons.forEach((button) => {
+
+
+
     button.addEventListener('click', () => {
 
         //console.log(button.innerText);
+        tabButtons.forEach(but => {
+            if (but.classList.contains('button-bg')) {
+                but.classList.remove('button-bg');
+            }
+        })
+        button.classList.add('button-bg');
+
 
         tabs.forEach(tab => {
             tab.classList.remove('active')
@@ -79,3 +90,25 @@ tabButtons.forEach((button) => {
         })
     });
 });
+
+//
+
+/* let timerSpan = document.getElementById('timer-span');
+//console.log(timerSpan);
+let fun = setInterval(system, 1000);
+
+function system() {
+
+    if (timerSpan.classList.contains('timer-span')) {
+        timerSpan.classList.remove('timer-span');
+        timerSpan.classList.add('timer-span__none');
+        stop();
+
+    }
+}
+
+function stop() {
+    clearInterval(fun);
+}
+//setInterval(system, 1000);
+system(); */
