@@ -1155,6 +1155,7 @@ input.form-field__input::placeholder {
     background-size: cover;
     padding-top: 100px;
     padding-bottom: 100px;
+    position: relative;
     // .action__container
     &__container {
         display: flex;
@@ -1210,7 +1211,6 @@ input.form-field__input::placeholder {
 
 .timer {
     width: 451px;
-    /* border: 1px solid red; */
     margin-top: 20px;
 }
 
@@ -1230,18 +1230,10 @@ input.form-field__input::placeholder {
     position: relative;
     width: 125px;
     max-width: 125px;
-    /* min-width: 60px; */
     margin-left: 10px;
     margin-right: 10px;
-    /* margin-left: -1px; */
-    /* text-align: left; */
     text-align: center;
 }
-
-
-/* .timer__elem:last-child {
-    margin-right: 0;
-} */
 
 .timer__elem::before {
     content: attr(data-title);
@@ -1261,12 +1253,6 @@ input.form-field__input::placeholder {
     font-size: 96px;
     opacity: 0.5;
 }
-
-
-/* .timer-span__none {
-    opacity: 0;
-}
- */
 
 .timer-span {
     animation: myfade 1s ease infinite;
@@ -1288,14 +1274,70 @@ input.form-field__input::placeholder {
 }
 
 
-/* .timer__elem:not(:last-child)::after {
-    content: ':';
-    opacity: 0.5;
-    font-size: 95px;
+/*  */
+
+.action-animation {
+    width: 100%;
+    min-height: 100%;
     position: absolute;
-    top: -3%;
-    right: -27px;
-} */
+    top: 0;
+    height: 0;
+    background-color: rgba(237, 143, 3, 0.945);
+    z-index: 110;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-animation__title {
+    z-index: 110;
+    /* font-family: 'PT Serif, serif'; */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 170px;
+    color: #dbdbdb;
+}
+
+.action-animation__fade {
+    animation: actionFade 1s ease 1;
+}
+
+.action-animation__none {
+    display: none;
+}
+
+@keyframes actionFade {
+    0% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    60% {
+        opacity: 0.4;
+    }
+    80% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0.0;
+    }
+}
+
+
+/* 
+
+
+
+
+
+
+
+
+*/
 
 .action-form {
     color: rgb(255, 255, 255);
@@ -1373,7 +1415,7 @@ input.form-field__input::placeholder {
 
 .examples-card {
     flex: 1 1 270px;
-    fbox-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 15px;
     // .examples-card__link
     &__link {

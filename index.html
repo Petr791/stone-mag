@@ -8,6 +8,8 @@
     <title>СтоунМаг</title>
 
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jQuery v3.6.0.js"></script>
+
 </head>
 
 <body>
@@ -60,7 +62,7 @@
         </header>
 
 
-        <main class="main">
+        <main class="main" id="main">
 
 
             <!-- section hero -->
@@ -623,6 +625,16 @@
             </section>
 
             <section id="action" class="action">
+                <!--  <div class="block-action">
+                    <h3 id="time-left" class="time-left"></h3>
+
+                </div> -->
+                <audio src="./source/sounds/sounds_alarm_clock.mp3" id="alarm-audio"></audio>
+                <div id="action-anim" class="action-animation">
+                    <h3 class="action-animation__title"></h3>
+                </div>
+
+
                 <div class="container action__container">
                     <div class="action__content">
                         <h2 class="title action__title">НЕ ПРОПУСТИТЕ <span class="title__span">АКЦИЮ!</span></h2>
@@ -630,7 +642,7 @@
                             <picture class="action-card__pic">
                                 <img class="action-card__img" src="./img/action/gift-icon.svg" alt="action__icon">
                             </picture>
-                            <div class="action-card__benefit">
+                            <div class="action-card__benefit fixed-div ">
                                 <p class="action-card__desc">Получите сертификат на скидку 20%<br> или мойку в подарок!</p>
                             </div>
                         </div>
@@ -701,12 +713,6 @@
                     </div>
 
                 </div>
-
-
-
-
-
-
             </section>
 
             <section class="examples">

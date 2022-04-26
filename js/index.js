@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // вызываем функцию countdownTimer каждую секунду
     timerId = setInterval(countdownTimer, 1000);
 
+
+
 })
 
 
@@ -68,8 +70,6 @@ const tabs = document.querySelectorAll('.tabcontent');
 
 tabButtons.forEach((button) => {
 
-
-
     button.addEventListener('click', () => {
 
         //console.log(button.innerText);
@@ -79,7 +79,6 @@ tabButtons.forEach((button) => {
             }
         })
         button.classList.add('button-bg');
-
 
         tabs.forEach(tab => {
             tab.classList.remove('active')
@@ -91,24 +90,144 @@ tabButtons.forEach((button) => {
     });
 });
 
-//
 
-/* let timerSpan = document.getElementById('timer-span');
-//console.log(timerSpan);
-let fun = setInterval(system, 1000);
 
-function system() {
 
-    if (timerSpan.classList.contains('timer-span')) {
-        timerSpan.classList.remove('timer-span');
-        timerSpan.classList.add('timer-span__none');
-        stop();
+
+// JS action animation
+window.addEventListener("load", function() {
+    const animElem = document.querySelector('.action-animation');
+    const audio = document.getElementById('alarm-audio');
+    console.log(audio);
+    const tl = document.querySelector('.action-animation__title')
+    var marker = true;
+
+
+    window.addEventListener('scroll', animOnScroll); // создается событие при котором функция выполняется.
+
+    function animOnScroll() {
+
+
+        const animElemHeight = animElem.offsetHeight;
+        //console.log(animItem);
+        const animElemOffset = offset(animElem).top;
+        const animStart = 2; // регулирует момент старта анимации. одна вторая высоты объекта.
+
+        // настройка момента старта анимации.
+        let animElemPoint = window.innerHeight - animElemHeight / animStart;
+        //проверка под экран
+        if (animElemHeight > window.innerHeight) {
+            animElemPoint = window.innerHeight - window.innerHeight / animStart;
+        }
+
+        //добавление класс при определенных условиях. проскроленные пиксели.
+        if ((pageYOffset > animElemOffset - animElemPoint) && pageYOffset < (animElemOffset + animElemHeight)) {
+            if (marker) {
+                setTimeout(actionAnimationTimer, 500);
+                marker = false;
+            }
+            //если условие не выполняется, то класс убираем. чтобы повторно анимировать объект.
+        }
 
     }
-}
+    // функция для получения положения на экране. позиция объекта сверху или слева.
+    function offset(el) {
+        const rect = el.getBoundingClientRect(),
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+    }
 
-function stop() {
-    clearInterval(fun);
-}
-//setInterval(system, 1000);
-system(); */
+    // объявить функцию, чтобы анимация появлялась на первом  экране сразу без прокрутки.
+    animOnScroll()
+        // Отсрочка появления анимации или в css delay в '.active'. Или в js с помощью setTimeout.
+    setTimeout(() => {
+        animOnScroll();
+    }, 100);
+
+
+
+    function actionAnimationTimer() {
+
+        let fun = setInterval(system, 1000);
+        let timeleft = 5;
+
+        function system() {
+            tl.innerText = timeleft;
+            timeleft -= 1;
+            if (timeleft < -1) {
+                stop();
+                //audioPlay.play();
+                //marker = false;
+                tl.innerText = '';
+                setTimeout(actionAnimationFade, 100);
+                setTimeout(actionAnimationNone, 1000);
+            }
+        }
+
+        function stop() {
+            clearInterval(fun);
+        }
+    }
+
+
+    function actionAnimationFade() {
+        animElem.classList.add('action-animation__fade');
+    }
+
+    function actionAnimationNone() {
+        animElem.classList.remove('action-animation');
+        animElem.classList.add('action-animation__none');
+    }
+});
+
+
+
+
+
+
+
+// jQuery action animation
+// window.addEventListener('scroll', animOnScroll);
+
+/* $(function() {
+
+    var block_show = null;
+
+    function scrollTracking() {
+        var wt = $(window).scrollTop();
+        var wh = $(window).height();
+
+        var et = $('.action').offset().top - 100;
+        var eh = $('.action').outerHeight();
+
+        if (et >= wt && et + eh <= wh + wt) {
+            if (block_show == null || block_show == false) {
+                console.log('Элемент показан');
+                if (marker) {
+                    setTimeout(aaa);
+                }
+
+            }
+            block_show = true;
+
+        } else {
+            if (block_show == null || block_show == true) {
+                console.log('Элемент не показан');
+            }
+            block_show = false;
+        }
+
+    }
+
+    $(window).scroll(function() {
+        scrollTracking();
+    });
+
+    $(document).ready(function() {
+        scrollTracking();
+
+    });
+
+}) 
+;*/
