@@ -1254,18 +1254,26 @@ input.form-field__input::placeholder {
     opacity: 0.5;
 }
 
-.timer-span {
+
+/* js animation span*/
+
+.timer-span__blink {
     animation: myfade 1s ease infinite;
 }
+
+
+/* css animation span */
+
+
+/* .timer-span {
+    animation: myfade 1s ease infinite;
+} */
 
 
 /* Animation */
 
 @keyframes myfade {
     0% {
-        opacity: 0.5;
-    }
-    50% {
         opacity: 0;
     }
     100% {
@@ -1274,7 +1282,7 @@ input.form-field__input::placeholder {
 }
 
 
-/*  */
+/* block animation for section action */
 
 .action-animation {
     width: 100%;

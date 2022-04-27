@@ -1,10 +1,12 @@
+const deadline = new Date(2022, 04, 24);
+
 document.addEventListener('DOMContentLoaded', function() {
     // конечная дата, например 1 июля 2022
     //const deadline = new Date(2022, 06, 01);
     /*  const deadline = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 01); */
     //const deadline = new Date(2022, 05, 01);
     //const deadline = new Date(Date.parse(new Date()) + 32 * 24 * 60 * 60 * 1000);
-    const deadline = new Date(2022, 04, 24);
+    //const deadline = new Date(2022, 04, 24);
 
     // id таймера
     let timerId = null;
@@ -52,6 +54,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+    // tabs
+    const tabButtons = document.querySelectorAll('.tablinks');
+    const tabs = document.querySelectorAll('.tabcontent');
+
+    tabButtons.forEach((button) => {
+
+        button.addEventListener('click', () => {
+
+            //console.log(button.innerText);
+            tabButtons.forEach(but => {
+                if (but.classList.contains('button-bg')) {
+                    but.classList.remove('button-bg');
+                }
+            })
+            button.classList.add('button-bg');
+
+            tabs.forEach(tab => {
+                tab.classList.remove('active')
+                if (button.dataset.tabContent === tab.dataset.tabContent) {
+
+                    tab.classList.add('active')
+                }
+            })
+        });
+    });
+
+
+
 })
 
 
@@ -59,36 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-// tabs
-
-const tabButtons = document.querySelectorAll('.tablinks');
-//console.log(tabButtons);
-
-const tabs = document.querySelectorAll('.tabcontent');
-//console.log(tabs);
-
-tabButtons.forEach((button) => {
-
-    button.addEventListener('click', () => {
-
-        //console.log(button.innerText);
-        tabButtons.forEach(but => {
-            if (but.classList.contains('button-bg')) {
-                but.classList.remove('button-bg');
-            }
-        })
-        button.classList.add('button-bg');
-
-        tabs.forEach(tab => {
-            tab.classList.remove('active')
-            if (button.dataset.tabContent === tab.dataset.tabContent) {
-
-                tab.classList.add('active')
-            }
-        })
-    });
-});
 
 
 
@@ -98,7 +99,6 @@ tabButtons.forEach((button) => {
 window.addEventListener("load", function() {
     const animElem = document.querySelector('.action-animation');
     const audio = document.getElementById('alarm-audio');
-    console.log(audio);
     const tl = document.querySelector('.action-animation__title')
     var marker = true;
 
@@ -144,9 +144,7 @@ window.addEventListener("load", function() {
     setTimeout(() => {
         animOnScroll();
     }, 100);
-
-
-
+    //function actionAnimationTimer
     function actionAnimationTimer() {
 
         let fun = setInterval(system, 1000);
@@ -170,7 +168,6 @@ window.addEventListener("load", function() {
         }
     }
 
-
     function actionAnimationFade() {
         animElem.classList.add('action-animation__fade');
     }
@@ -179,6 +176,56 @@ window.addEventListener("load", function() {
         animElem.classList.remove('action-animation');
         animElem.classList.add('action-animation__none');
     }
+
+
+
+
+
+
+    // js animation timer span
+    const nowDate = new Date();
+    const timeDifference = deadline - nowDate;
+    //
+    //console.log(deadline);
+    //console.log(nowDate);
+    //console.log(timeDifference);
+
+    let timerSpans = document.querySelectorAll('.timer-span');
+    let tr = document.getElementById('timerspan-right');
+    //let timeSec = 5;
+    let timeSec = timeDifference;
+    console.log(timeSec);
+
+    function spanFade() {
+        let fun = setInterval(timerSpanFade, 1000);
+
+        function stop() {
+            clearInterval(fun);
+        }
+
+        function timerSpanFade() {
+            let marker2 = true;
+            timeSec -= 1;
+            //console.log(timeSec);
+            if (timeSec < 0) {
+                marker2 = false;
+                stop();
+                //console.log(marker2);
+                //audioPlay.play();
+            }
+            for (const elem of timerSpans) {
+                if (marker2) {
+                    elem.classList.add('timer-span__blink');
+                } else {
+                    elem.classList.remove('timer-span__blink');
+                }
+            }
+        }
+
+    }
+    setTimeout(spanFade);
+
+
 });
 
 
