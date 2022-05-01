@@ -73,6 +73,7 @@ a:visited {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    overflow-x: hidden;
 }
 
 .title {
@@ -102,7 +103,7 @@ a:visited {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     // .header__container
     &__container {
-        padding-top: 25px;
+        /* padding-top: 25px; */
     }
     // .header__links
     &__links {
@@ -111,6 +112,10 @@ a:visited {
         align-items: center;
         font-size: 1em;
         text-align: center;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        height: 100px;
     }
     // .header__link
     &__link {}
@@ -322,8 +327,8 @@ a:visited {
         width: 94px;
         height: 123px;
         position: absolute;
-        top: -23%;
-        left: 100%;
+        top: -32px;
+        left: 372px;
     }
     // .hero-stock__time
     &__time {
@@ -1221,7 +1226,8 @@ input.form-field__input::placeholder {
     font-size: 96px;
     line-height: 100%;
     color: #FFB75E;
-    margin: 0 -10px;
+    /* margin: 0 -10px; */
+    margin: 0;
 }
 
 .timer__elem {
@@ -1252,13 +1258,14 @@ input.form-field__input::placeholder {
 .timer-span {
     font-size: 96px;
     opacity: 0.5;
+    margin: 0px 2px;
 }
 
 
 /* js animation span*/
 
 .timer-span__blink {
-    animation: myfade 1s ease infinite;
+    animation: myfade 1.8s ease infinite;
 }
 
 
@@ -1516,10 +1523,14 @@ input.form-field__input::placeholder {
 /* @ .profit*/
 
 .profit {
+    /* overflow-x: visible; */
     margin-bottom: 120px;
     // .profit__container
     &__container {
         /* padding: 0 30px; */
+        width: 100%;
+        max-width: 1200px;
+        overflow-x: visible;
     }
     // .profit__title
     &__title {}
@@ -1528,7 +1539,6 @@ input.form-field__input::placeholder {
         display: flex;
         flex-direction: column;
         /*  border: 1px solid red; */
-        padding-top: 30px;
     }
 }
 
@@ -1587,9 +1597,9 @@ input.form-field__input::placeholder {
         margin-bottom: 0;
     }
     &__box {
-        flex: 0 0 37px;
+        flex: 0 0 48px;
         height: auto;
-        /* background-color: #9b5d01; */
+        /*  background-color: #9b5d01; */
     }
     &__wrapper {
         flex: 0 1 auto;
@@ -1608,23 +1618,28 @@ input.form-field__input::placeholder {
     }
     &__inner::before {
         content: "";
-        width: 50px;
+        width: 62px;
         height: 100px;
         background-color: rgb(255, 255, 255);
         margin: 0;
         position: absolute;
         top: 19px;
-        left: -35px;
+        left: -47px;
     }
     // .profit-item__number
     &__number {
+        width: 80px;
+        /* background-color: rgb(145, 43, 145); */
         font-weight: 700;
         font-size: 64px;
         line-height: 100%;
         color: #FFB75E;
         margin: 0;
         position: absolute;
-        top: 36px;
+        top: 39px;
+        left: -48px;
+    }
+    &__number--01 {
         left: -36px;
     }
     // .profit-item__title
@@ -1765,6 +1780,10 @@ input.form-field__input::placeholder {
     padding-right: 45px;
 }
 
+.profit-content__qualitatively::-webkit-scrollbar {
+    display: none;
+}
+
 
 /* 
 
@@ -1781,37 +1800,20 @@ input.form-field__input::placeholder {
 
 /* @media */
 
-@media (min-width: 1390px) {
+@media (max-width: 1369px) {
     .profit-content__qualitatively {
-        width: 100%;
-        max-width: 1390px;
+        /* width: 100%;
+        min-width: 1369px;
         align-self: flex-start;
-        overflow-x: visible;
+        overflow-x: auto; */
     }
 }
 
-@media (max-width: 1330px) {
+@media (min-width: 1201px) {
     .profit-content__qualitatively {
         width: 100%;
-        max-width: 1330px;
-        align-self: flex-start;
-        overflow-x: auto;
-    }
-}
-
-@media (max-width: 1290px) {
-    .profit-content__qualitatively {
-        width: 100%;
-        max-width: 1290px;
-        align-self: flex-start;
-        overflow-x: auto;
-    }
-}
-
-@media (max-width: 1210px) {
-    .profit-content__qualitatively {
-        width: 100%;
-        max-width: 1210px;
+        max-width: 1375px;
+        min-width: 1275px;
         align-self: flex-start;
         overflow-x: auto;
     }
@@ -1820,8 +1822,8 @@ input.form-field__input::placeholder {
 @media (max-width: 1160px) {
     .container {
         max-width: 1160px;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     .button--secondary {
         font-size: 0.8em;
@@ -1849,13 +1851,19 @@ input.form-field__input::placeholder {
         gap: 15px;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
+    .profit-content {
+        justify-content: center;
+    }
+    .profit-item {
+        margin-bottom: 25px;
+    }
 }
 
 @media (max-width: 1130px) {
     .container {
-        /* max-width: 1010px; */
-        /* padding-left: 30px;
-        padding-right: 30px; */
+        max-width: 1130px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     .button--secondary {
         font-size: 0.6em;
@@ -1908,7 +1916,7 @@ input.form-field__input::placeholder {
         text-align: center;
     }
     .profit-tag__bracket {
-        font-size: 480px;
+        /* font-size: 480px; */
     }
     .profit-tag__title {
         font-size: 42px;
@@ -1919,18 +1927,51 @@ input.form-field__input::placeholder {
     .profit-tag__wrapper--left {
         padding-right: 20px;
     }
+    /*  .profit-content__qualitatively {
+        overflow-x: visible;
+    } */
+    .profit-content__qualitatively {
+        /*   width: 100%;
+        max-width: 1170px;
+        
+        align-self: flex-start;
+        overflow-x: auto; */
+    }
 }
 
 @media (max-width: 1010px) {
+    .container {
+        max-width: 1010px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    // vertical mobile menu
     .header__links {
-        display: none;
+        /* display: none; */
     }
     .icon-menu {
-        display: block;
+        /*  display: block;
         position: absolute;
         top: 30px;
-        right: 45px;
+        right: 45px; */
     }
+    // horizontal mobile menu
+    .header__links {
+        height: 100px;
+    }
+    .header__link {
+        margin: 0px 20px;
+    }
+    .header__link:first-child {
+        margin-left: 20px;
+    }
+    .header__link:last-child {
+        margin-right: 20px;
+    }
+    .header__links::-webkit-scrollbar {
+        display: none;
+    }
+    //
     .hero__info {
         flex-direction: column;
         justify-content: center;
@@ -1940,7 +1981,6 @@ input.form-field__input::placeholder {
     .hero__content {
         flex: 0 1 auto;
         max-width: 100%;
-        padding: 0px 20px;
         margin-bottom: 75px;
     }
     .hero__title {
@@ -1974,7 +2014,7 @@ input.form-field__input::placeholder {
         align-items: center;
     }
     .action__content {
-        text-align: center;
+        text-align: left;
         margin-bottom: 117px;
     }
     .action__card {
@@ -1992,14 +2032,26 @@ input.form-field__input::placeholder {
         text-align: left;
     }
     .profit-tag__bracket {
-        font-size: 480px;
+        /* font-size: 480px; */
     }
     .profit-tag__title {
         font-size: 36px;
     }
+    .profit-item__title {
+        line-height: 125%;
+    }
+    .profit-item__desc {
+        line-height: 128%;
+        margin-bottom: 10px;
+    }
 }
 
 @media (max-width: 867px) {
+    .container {
+        max-width: 867px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     .hero {
         background-position: 52% 0%;
     }
@@ -2015,9 +2067,11 @@ input.form-field__input::placeholder {
     }
     .services-cards {
         padding-bottom: 43px;
+        margin-left: 0;
+        margin-right: 0;
     }
     .services-card {
-        flex: 0 1 100%;
+        flex: 0 1 90%;
     }
     .selection-step__title {
         margin-top: 56px;
@@ -2047,7 +2101,7 @@ input.form-field__input::placeholder {
         text-align: left;
     }
     .profit-tag__bracket {
-        font-size: 480px;
+        /* font-size: 480px; */
     }
     .profit-tag__title {
         font-size: 32px;
@@ -2069,6 +2123,28 @@ input.form-field__input::placeholder {
         max-width: 100%;
         padding-left: 10px;
         padding-right: 10px;
+    }
+    .hero__content {
+        margin-bottom: 55px;
+    }
+    .hero__info {
+        padding-top: 145px;
+    }
+    .hero__top {
+        margin-bottom: 55px;
+    }
+    .hero__title {
+        margin: 0;
+    }
+    .hero-stock {
+        margin-bottom: 50px;
+    }
+    .action-card__desc {
+        font-size: 17px;
+        line-height: 118%;
+    }
+    .timer__title {
+        line-height: 115%;
     }
     .profit-content {
         flex-direction: column;
@@ -2155,14 +2231,21 @@ input.form-field__input::placeholder {
         flex: 0 1 40%;
         margin-left: 0px;
     }
+    .profit-item__title {
+        font-size: 22px;
+        line-height: 110%;
+        margin: 0;
+        padding: 0;
+    }
+    .profit-item__desc {
+        font-size: 16px;
+        line-height: 113%;
+        margin: 0;
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 700px) {
-    .hero-stock::after {
-        /*  width: 71px;
-        top: -44%;
-        left: 79%; */
-    }
     .advantage-card {
         flex: 0 1 50%;
     }
@@ -2180,8 +2263,8 @@ input.form-field__input::placeholder {
     }
     .table td {}
     .timer {
-        text-align: center;
-        width: 80%;
+        /*  text-align: center; */
+        /* width: 80%; */
     }
     .timer__elems {}
     .timer__span {
@@ -2189,7 +2272,7 @@ input.form-field__input::placeholder {
         opacity: 0.5;
     }
     .timer__elem {
-        max-width: 70px;
+        max-width: 118px;
         text-align: center;
     }
     .timer__elem::before {
@@ -2222,9 +2305,9 @@ input.form-field__input::placeholder {
         line-height: 40px;
     }
     .hero-stock::after {
-        width: 65px;
-        top: -11%;
-        left: 86%;
+        width: 49px;
+        top: -9px;
+        left: 341px;
     }
     .hero-cards {
         flex-wrap: wrap;
@@ -2276,23 +2359,21 @@ input.form-field__input::placeholder {
         font-size: 1.4em;
     }
     .hero-stock::after {
-        /* width: 45px;
-        top: -26%;
-        left: 94%; */
-        display: none;
+        width: 49px;
+        top: -9px;
+        left: 323px;
     }
     .services-card__wrapper {
         display: inline-block;
         max-width: 100%;
         padding: 0px 16px 20px 14px;
-        text-align: center;
+        /*  text-align: center; */
     }
     .services-card__title {
         display: inline-block;
-        font-size: 1.2em;
+        /* font-size: 1.2em; */
+        line-height: 118%;
         vertical-align: bottom;
-        margin-right: 5px;
-        /* margin-top: 10px; */
     }
     .material-cards {
         /* grid-template-columns: 300px; */
@@ -2355,9 +2436,13 @@ input.form-field__input::placeholder {
         font-size: 0.8em;
         padding: 16px 30px;
     }
+    .action__content {
+        padding: 0 10px;
+    }
     .timer {
         text-align: center;
         width: 80%;
+        max-width: 270px;
     }
     .timer__elems {
         font-weight: 700;
@@ -2375,46 +2460,56 @@ input.form-field__input::placeholder {
     .timer__elem::before {
         bottom: -63%;
     }
+    .services-card__title {
+        font-size: 1.45em;
+        line-height: 118%;
+    }
+    .svg-services {
+        width: 31px;
+        height: 31px;
+    }
     .profit-item__inner {
         /* display: block; */
         max-width: 450px;
         background: #F8F8F8;
         padding: 7px 3px 7px 24px;
     }
-    .profit-item__number {
-        font-weight: 700;
-        font-size: 56px;
-        margin: 0;
-        top: 44px;
-        left: -33px;
-    }
     .profit-item__title {
-        font-weight: 700;
         font-size: 20px;
         line-height: 110%;
-        color: #0F0F0F;
         margin: 0;
         padding: 0;
     }
+    .profit-item__desc {
+        font-size: 16px;
+        line-height: 113%;
+        margin: 0;
+        margin-top: 10px;
+    }
     .profit-item__wrapper {
-        padding: 9px 9px 9px 19px;
+        padding: 13px 9px 13px 19px;
+    }
+    .profit-item__box {
+        flex: 0 0 24px;
     }
     .profit-item__inner::before {
         content: "";
-        width: 50px;
-        height: 89px;
-        background-color: #ffffff;
+        width: 43px;
+        height: 64px;
         margin: 0;
         position: absolute;
-        top: 9px;
-        left: -31px;
+        top: 13px;
+        left: -24px;
     }
     .profit-item__number {
         font-weight: 700;
         font-size: 42px;
         margin: 0;
-        top: 32px;
-        left: -13px;
+        top: 23px;
+        left: -23px;
+    }
+    .profit-item__number--01 {
+        left: -15px;
     }
 }
 
@@ -2422,5 +2517,11 @@ input.form-field__input::placeholder {
     .container {
         padding-left: 15px;
         padding-right: 15px;
+    }
+    .services-card__title {
+        font-size: 1.25em;
+    }
+    .services-card__wrapper {
+        padding-bottom: 11px;
     }
 }
