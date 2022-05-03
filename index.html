@@ -16,9 +16,10 @@
     <div class="wrapper">
 
         <!-- header -->
-        <header class="header">
+        <header id="header" class="header">
             <div class="container header__container">
-                <div class="header__links dragscroll">
+                <!-- для горизонтального меню добавить class dragscroll <div class="header__links dragscroll"> -->
+                <div id="header-menu" class="header__links dragscroll">
                     <a class="header__link header__link--logo"> <img class="header__logo" src="./img/header/logo.svg" alt="Лого StoneМаг"> </a>
 
                     <div class="header__link header__link--block">
@@ -55,8 +56,8 @@
 
 
                 </div>
-                <div class="icon-menu">
-                    <img class="icon-menu__img" src=".//img/header/menu-icon.svg" alt="icon-menu">
+                <div id="icon-menu" class="icon-menu">
+                    <span class="icon-menu__span"></span>
                 </div>
             </div>
         </header>
@@ -66,7 +67,7 @@
 
 
             <!-- section hero -->
-            <section class="hero">
+            <section id="hero" class="hero">
                 <div class="container hero__container">
                     <div class="hero__info">
                         <div class="hero__content">
@@ -707,7 +708,7 @@
 
 
                     <!-- Tab button -->
-                    <div class="tab">
+                    <div class="tab dragscroll">
                         <button data-tab-content="content-1" class="tablinks button-bg" id="defaultOpen">Столешницы</button>
                         <button data-tab-content="content-2" class="tablinks">Все работы</button>
                         <button data-tab-content="content-3" class="tablinks">Эксклюзивные изделия</button>
@@ -721,219 +722,187 @@
                     <div data-tab-content="content-1" id="content-1" class="tabcontent active">
                         <div class="cards examples-cards">
 
-
-                            <div class="examples-cards__wrapper">
-
-                                <div class="examples-cards__inner">
-                                    <div class="card examples-card">
-                                        <a href="Столешницы" class="examples-card__link" target="_blank">
-                                            <span class="examples-card__link--background">
+                            <div class="card examples-card">
+                                <a href="Столешницы" class="examples-card__link" target="_blank">
+                                    <span class="examples-card__link--background">
 												 <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
 											 </span>
-                                            <picture class="examples-card__pic">
-                                                <img class="examples-card__img" src="./img/examples/example-1.png" alt="Столешницы">
-                                            </picture>
-                                        </a>
-                                    </div>
-                                    <div class="card examples-card">
-                                        <a href="Столешницы" class="examples-card__link" target="_blank">
-                                            <span class="examples-card__link--background">
+                                    <picture class="examples-card__pic">
+                                        <img class="examples-card__img" src="./img/examples/example-1.png" alt="Столешницы">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="card examples-card">
+                                <a href="Столешницы" class="examples-card__link" target="_blank">
+                                    <span class="examples-card__link--background">
 												 <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
 											 </span>
-                                            <picture class="examples-card__pic">
-                                                <img class="examples-card__img" src="./img/examples/example-2.png" alt="Столешницы">
-                                            </picture>
-                                        </a>
-                                    </div>
-
-                                </div>
-                                <div class="examples-cards__inner">
-                                    <div class="card examples-card">
-                                        <a href="Столешницы" class="examples-card__link" target="_blank">
-                                            <span class="examples-card__link--background">
-												 <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
-											 </span>
-                                            <picture class="examples-card__pic">
-                                                <img class="examples-card__img" src="./img/examples/example-3.png" alt="Столешницы">
-                                            </picture>
-                                        </a>
-                                    </div>
-                                    <div class="card examples-card">
-                                        <a href="Столешницы" class="examples-card__link" target="_blank">
-                                            <span class="examples-card__link--background">
-												 <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
-											 </span>
-                                            <picture class="examples-card__pic">
-                                                <img class="examples-card__img" src="./img/examples/example-4.png" alt="Столешницы">
-                                            </picture>
-                                        </a>
-                                    </div>
-
-                                </div>
-
-
+                                    <picture class="examples-card__pic">
+                                        <img class="examples-card__img" src="./img/examples/example-2.png" alt="Столешницы">
+                                    </picture>
+                                </a>
                             </div>
 
-                            <div class="examples-cards__wrapper">
 
-                                <div class="card examples-card--big">
-                                    <a href="Столешницы" class="examples-card__link" target="_blank">
-                                        <span class="examples-card__link--background">
-									  <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
-								  </span>
-                                        <picture class="examples-card__pic">
-                                            <img class="examples-card__img" src="./img/examples/example-5.png" alt="Столешницы">
-                                        </picture>
-                                    </a>
-                                </div>
 
+                            <div class="card examples-card--big">
+                                <a href="Столешницы" class="examples-card__link" target="_blank">
+                                    <span class="examples-card__link--background">
+							  <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
+						  </span>
+                                    <picture class="examples-card__pic">
+                                        <img class="examples-card__img" src="./img/examples/example-5.png" alt="Столешницы">
+                                    </picture>
+                                </a>
                             </div>
 
-                        </div>
 
 
 
-                        <!--  -->
-                        <div class="cards examples-cards">
 
-                            <div class="examples-cards__wrapper">
+                            <div class="card examples-card">
+                                <a href="Столешницы" class="examples-card__link" target="_blank">
+                                    <span class="examples-card__link--background">
+												 <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
+											 </span>
+                                    <picture class="examples-card__pic">
+                                        <img class="examples-card__img" src="./img/examples/example-3.png" alt="Столешницы">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="card examples-card">
+                                <a href="Столешницы" class="examples-card__link" target="_blank">
+                                    <span class="examples-card__link--background">
+												 <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
+											 </span>
+                                    <picture class="examples-card__pic">
+                                        <img class="examples-card__img" src="./img/examples/example-4.png" alt="Столешницы">
+                                    </picture>
+                                </a>
+                            </div>
 
-                                <div class="card examples-card--big">
-                                    <a href="Столешницы" class="examples-card__link" target="_blank">
-                                        <span class="examples-card__link--background">
+
+
+                            <!--  -->
+
+                            <div class="card examples-card--big">
+                                <a href="Столешницы" class="examples-card__link" target="_blank">
+                                    <span class="examples-card__link--background">
 									<img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
 								</span>
-                                        <picture class="examples-card__pic">
-                                            <img class="examples-card__img" src="./img/examples/example-6.png" alt="Столешницы">
-                                        </picture>
-                                    </a>
-                                </div>
-
+                                    <picture class="examples-card__pic">
+                                        <img class="examples-card__img" src="./img/examples/example-6.png" alt="Столешницы">
+                                    </picture>
+                                </a>
                             </div>
 
-                            <div class="examples-cards__wrapper">
 
-                                <div class="examples-cards__inner">
-                                    <div class="card examples-card">
-                                        <a href="Столешницы" class="examples-card__link" target="_blank">
-                                            <span class="examples-card__link--background">
+                            <div class="card examples-card">
+                                <a href="Столешницы" class="examples-card__link" target="_blank">
+                                    <span class="examples-card__link--background">
 										  <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
 									  </span>
-                                            <picture class="examples-card__pic">
-                                                <img class="examples-card__img" src="./img/examples/example-7.png" alt="Столешницы">
-                                            </picture>
-                                        </a>
-                                    </div>
-                                    <div class="card examples-card">
-                                        <a href="Столешницы" class="examples-card__link" target="_blank">
-                                            <span class="examples-card__link--background">
-										  <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
-									  </span>
-                                            <picture class="examples-card__pic">
-                                                <img class="examples-card__img" src="./img/examples/example-8.png" alt="Столешницы">
-                                            </picture>
-                                        </a>
-                                    </div>
-
-                                </div>
-                                <div class="examples-cards__inner">
-                                    <div class="card examples-card">
-                                        <a href="Столешницы" class="examples-card__link" target="_blank">
-                                            <span class="examples-card__link--background">
-										  <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
-									  </span>
-                                            <picture class="examples-card__pic">
-                                                <img class="examples-card__img" src="./img/examples/example-9.png" alt="Столешницы">
-                                            </picture>
-                                        </a>
-                                    </div>
-                                    <div class="card examples-card">
-                                        <a href="Столешницы" class="examples-card__link" target="_blank">
-                                            <span class="examples-card__link--background">
-										  <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
-									  </span>
-                                            <picture class="examples-card__pic">
-                                                <img class="examples-card__img" src="./img/examples/example-10.png" alt="Столешницы">
-                                            </picture>
-                                        </a>
-                                    </div>
-
-                                </div>
-
-
+                                    <picture class="examples-card__pic">
+                                        <img class="examples-card__img" src="./img/examples/example-7.png" alt="Столешницы">
+                                    </picture>
+                                </a>
                             </div>
+                            <div class="card examples-card">
+                                <a href="Столешницы" class="examples-card__link" target="_blank">
+                                    <span class="examples-card__link--background">
+										  <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
+									  </span>
+                                    <picture class="examples-card__pic">
+                                        <img class="examples-card__img" src="./img/examples/example-8.png" alt="Столешницы">
+                                    </picture>
+                                </a>
+                            </div>
+
+
+
+                            <div class="card examples-card">
+                                <a href="Столешницы" class="examples-card__link" target="_blank">
+                                    <span class="examples-card__link--background">
+										  <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
+									  </span>
+                                    <picture class="examples-card__pic">
+                                        <img class="examples-card__img" src="./img/examples/example-9.png" alt="Столешницы">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="card examples-card">
+                                <a href="Столешницы" class="examples-card__link" target="_blank">
+                                    <span class="examples-card__link--background">
+										  <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
+									  </span>
+                                    <picture class="examples-card__pic">
+                                        <img class="examples-card__img" src="./img/examples/example-10.png" alt="Столешницы">
+                                    </picture>
+                                </a>
+                            </div>
+
 
                         </div>
+
+
                     </div>
 
                     <div data-tab-content="content-2" id="content-2" class="tabcontent">
                         <div class="cards examples-cards">
-
-                            <div class="examples-cards__wrapper">
-
-                                <div class="card examples-card--big">
-                                    <a href="Столешницы" class="examples-card__link" target="_blank">
-                                        <span class="examples-card__link--background">
-							  <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
-						  </span>
-                                        <picture class="examples-card__pic">
-                                            <img class="examples-card__img" src="./img/examples/example-6.png" alt="Столешницы">
-                                        </picture>
-                                    </a>
-                                </div>
-
+                            <div class="card examples-card--big">
+                                <a href="Столешницы" class="examples-card__link" target="_blank">
+                                    <span class="examples-card__link--background">
+							 <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
+						 </span>
+                                    <picture class="examples-card__pic">
+                                        <img class="examples-card__img" src="./img/examples/example-6.png" alt="Столешницы">
+                                    </picture>
+                                </a>
                             </div>
 
-                            <div class="examples-cards__wrapper">
 
-                                <div class="examples-cards__inner">
-                                    <div class="card examples-card">
-                                        <a href="Столешницы" class="examples-card__link" target="_blank">
-                                            <span class="examples-card__link--background">
-									 <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
-								 </span>
-                                            <picture class="examples-card__pic">
-                                                <img class="examples-card__img" src="./img/examples/example-7.png" alt="Столешницы">
-                                            </picture>
-                                        </a>
-                                    </div>
-                                    <div class="card examples-card">
-                                        <a href="Столешницы" class="examples-card__link" target="_blank">
-                                            <span class="examples-card__link--background">
-									 <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
-								 </span>
-                                            <picture class="examples-card__pic">
-                                                <img class="examples-card__img" src="./img/examples/example-8.png" alt="Столешницы">
-                                            </picture>
-                                        </a>
-                                    </div>
-
-                                </div>
-                                <div class="examples-cards__inner">
-                                    <div class="card examples-card">
-                                        <a href="Столешницы" class="examples-card__link" target="_blank">
-                                            <span class="examples-card__link--background">
-									 <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
-								 </span>
-                                            <picture class="examples-card__pic">
-                                                <img class="examples-card__img" src="./img/examples/example-9.png" alt="Столешницы">
-                                            </picture>
-                                        </a>
-                                    </div>
-                                    <div class="card examples-card">
-                                        <a href="Столешницы" class="examples-card__link" target="_blank">
-                                            <span class="examples-card__link--background">
-									 <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
-								 </span>
-                                            <picture class="examples-card__pic">
-                                                <img class="examples-card__img" src="./img/examples/example-10.png" alt="Столешницы">
-                                            </picture>
-                                        </a>
-                                    </div>
-
-                                </div>
+                            <div class="card examples-card">
+                                <a href="Столешницы" class="examples-card__link" target="_blank">
+                                    <span class="examples-card__link--background">
+									<img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
+								</span>
+                                    <picture class="examples-card__pic">
+                                        <img class="examples-card__img" src="./img/examples/example-7.png" alt="Столешницы">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="card examples-card">
+                                <a href="Столешницы" class="examples-card__link" target="_blank">
+                                    <span class="examples-card__link--background">
+									<img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
+								</span>
+                                    <picture class="examples-card__pic">
+                                        <img class="examples-card__img" src="./img/examples/example-8.png" alt="Столешницы">
+                                    </picture>
+                                </a>
+                            </div>
 
 
+
+                            <div class="card examples-card">
+                                <a href="Столешницы" class="examples-card__link" target="_blank">
+                                    <span class="examples-card__link--background">
+									<img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
+								</span>
+                                    <picture class="examples-card__pic">
+                                        <img class="examples-card__img" src="./img/examples/example-9.png" alt="Столешницы">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="card examples-card">
+                                <a href="Столешницы" class="examples-card__link" target="_blank">
+                                    <span class="examples-card__link--background">
+									<img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
+								</span>
+                                    <picture class="examples-card__pic">
+                                        <img class="examples-card__img" src="./img/examples/example-10.png" alt="Столешницы">
+                                    </picture>
+                                </a>
                             </div>
 
                         </div>
@@ -941,111 +910,102 @@
 
                     <div data-tab-content="content-3" id="content-3" class="tabcontent">
                         <div class="cards examples-cards">
+                            <div class="cards examples-cards">
 
-
-                            <div class="examples-cards__wrapper">
-
-                                <div class="examples-cards__inner">
-                                    <div class="card examples-card">
-                                        <a href="Столешницы" class="examples-card__link" target="_blank">
-                                            <span class="examples-card__link--background">
-											<img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
-										</span>
-                                            <picture class="examples-card__pic">
-                                                <img class="examples-card__img" src="./img/examples/example-1.png" alt="Столешницы">
-                                            </picture>
-                                        </a>
-                                    </div>
-                                    <div class="card examples-card">
-                                        <a href="Столешницы" class="examples-card__link" target="_blank">
-                                            <span class="examples-card__link--background">
-											<img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
-										</span>
-                                            <picture class="examples-card__pic">
-                                                <img class="examples-card__img" src="./img/examples/example-2.png" alt="Столешницы">
-                                            </picture>
-                                        </a>
-                                    </div>
-
+                                <div class="card examples-card">
+                                    <a href="Столешницы" class="examples-card__link" target="_blank">
+                                        <span class="examples-card__link--background">
+												<img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
+											</span>
+                                        <picture class="examples-card__pic">
+                                            <img class="examples-card__img" src="./img/examples/example-1.png" alt="Столешницы">
+                                        </picture>
+                                    </a>
                                 </div>
-                                <div class="examples-cards__inner">
-                                    <div class="card examples-card">
-                                        <a href="Столешницы" class="examples-card__link" target="_blank">
-                                            <span class="examples-card__link--background">
-											<img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
-										</span>
-                                            <picture class="examples-card__pic">
-                                                <img class="examples-card__img" src="./img/examples/example-3.png" alt="Столешницы">
-                                            </picture>
-                                        </a>
-                                    </div>
-                                    <div class="card examples-card">
-                                        <a href="Столешницы" class="examples-card__link" target="_blank">
-                                            <span class="examples-card__link--background">
-											<img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
-										</span>
-                                            <picture class="examples-card__pic">
-                                                <img class="examples-card__img" src="./img/examples/example-4.png" alt="Столешницы">
-                                            </picture>
-                                        </a>
-                                    </div>
-
+                                <div class="card examples-card">
+                                    <a href="Столешницы" class="examples-card__link" target="_blank">
+                                        <span class="examples-card__link--background">
+												<img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
+											</span>
+                                        <picture class="examples-card__pic">
+                                            <img class="examples-card__img" src="./img/examples/example-2.png" alt="Столешницы">
+                                        </picture>
+                                    </a>
                                 </div>
 
 
-                            </div>
-
-                            <div class="examples-cards__wrapper">
 
                                 <div class="card examples-card--big">
                                     <a href="Столешницы" class="examples-card__link" target="_blank">
                                         <span class="examples-card__link--background">
-								 <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
-							 </span>
+							 <img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
+						 </span>
                                         <picture class="examples-card__pic">
                                             <img class="examples-card__img" src="./img/examples/example-5.png" alt="Столешницы">
                                         </picture>
                                     </a>
                                 </div>
 
+
+
+
+
+                                <div class="card examples-card">
+                                    <a href="Столешницы" class="examples-card__link" target="_blank">
+                                        <span class="examples-card__link--background">
+												<img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
+											</span>
+                                        <picture class="examples-card__pic">
+                                            <img class="examples-card__img" src="./img/examples/example-3.png" alt="Столешницы">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="card examples-card">
+                                    <a href="Столешницы" class="examples-card__link" target="_blank">
+                                        <span class="examples-card__link--background">
+												<img class="examples-card__icon" src="./img/examples/zoom.svg" alt="examples__icon">
+											</span>
+                                        <picture class="examples-card__pic">
+                                            <img class="examples-card__img" src="./img/examples/example-4.png" alt="Столешницы">
+                                        </picture>
+                                    </a>
+                                </div>
                             </div>
+                        </div>
+                        <div data-tab-content="content-4" id="content-4" class="tabcontent">
 
                         </div>
+
+                        <div data-tab-content="content-5" id="content-5" class="tabcontent">
+
+                        </div>
+                        <div data-tab-content="content-6" id="content-6" class="tabcontent">
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     </div>
-                    <div data-tab-content="content-4" id="content-4" class="tabcontent">
-
-                    </div>
-
-                    <div data-tab-content="content-5" id="content-5" class="tabcontent">
-
-                    </div>
-                    <div data-tab-content="content-6" id="content-6" class="tabcontent">
-
-                    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                </div>
             </section>
 
             <section class="clients">
@@ -1330,11 +1290,11 @@
 
         </main>
 
-    </div>
+        </div>
 
 
-    <script defer src="./js/dragscroll.js"></script>
-    <script src="./js/index.js"></script>
+        <script defer src="./js/dragscroll.js"></script>
+        <script src="./js/index.js"></script>
 </body>
 
 </html>

@@ -95,8 +95,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// JS action animation
+
 window.addEventListener("load", function() {
+
+    // JS action animation
     // js animation timer span
     const nowDate = new Date();
     const timeDifference = deadline - nowDate;
@@ -139,6 +141,35 @@ window.addEventListener("load", function() {
 
     }
     setTimeout(spanFade);
+
+    // menu
+    let header = document.getElementById('header');
+    let iconMenu = document.getElementById('icon-menu');
+    let headerMenu = document.getElementById('header-menu');
+    let hero = document.getElementById('hero');
+
+
+    iconMenu.addEventListener("click", function() {
+        //alert("Hello World!");
+
+
+        // вертикальное мобильное меню
+
+        // полосы меню становятся крестиком 
+        this.classList.toggle('open');
+
+        // мобильное меню
+        headerMenu.classList.toggle('menu-active');
+
+        // отступ для линии внизу header
+        header.classList.toggle('header-line');
+
+        // отступ блока hero из-за того, что header имеет position: absolute и не может подвинуть в низ hero(фоновая картинка в секции hero, а header в макете должен быть над картинкой, но он не находится в main>hero)
+        hero.classList.toggle('hero-padding');
+
+
+    });
+
 
 
 });
