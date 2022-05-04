@@ -1625,6 +1625,7 @@ input.form-field__input::placeholder {
 
 .btn-selection {
   text-align: center;
+  padding-bottom: 7px;
 }
 
 /*@ .action  */
@@ -1701,7 +1702,7 @@ input.form-field__input::placeholder {
 }
 
 .timer {
-  width: 451px;
+  width: 481px;
   margin-top: 20px;
 }
 
@@ -1760,6 +1761,11 @@ input.form-field__input::placeholder {
 
 /* js animation span*/
 .timer-span__blink {
+  -webkit-animation: myfade 1.8s ease infinite;
+          animation: myfade 1.8s ease infinite;
+}
+
+.timer-span--second {
   -webkit-animation: myfade 1.8s ease infinite;
           animation: myfade 1.8s ease infinite;
 }
@@ -2403,6 +2409,18 @@ input.form-field__input::placeholder {
   display: none;
 }
 
+/*  */
+.action-second {
+  background-image: url("../img/action/timer-2-bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+          background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
 /* 
 
 
@@ -2842,6 +2860,7 @@ input.form-field__input::placeholder {
   }
   .profit {
     padding-top: 20px;
+    margin-bottom: 75px;
   }
   .profit-content {
     -webkit-box-pack: center;

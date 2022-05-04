@@ -1,57 +1,75 @@
-const deadline = new Date(2022, 04, 24);
+const deadline1 = new Date(2022, 04, 24);
+const deadline2 = new Date(2022, 04, 18);
 
-document.addEventListener('DOMContentLoaded', function() {
-    // конечная дата, например 1 июля 2022
-    //const deadline = new Date(2022, 06, 01);
-    /*  const deadline = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 01); */
-    //const deadline = new Date(2022, 05, 01);
-    //const deadline = new Date(Date.parse(new Date()) + 32 * 24 * 60 * 60 * 1000);
-    //const deadline = new Date(2022, 04, 24);
 
-    // id таймера
-    let timerId = null;
-    // склонение числительных
-    /*  function declensionNum(num, words) {
-         return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
-     } */
-    // вычисляем разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
-    function countdownTimer() {
-        const diff = deadline - new Date();
-        if (diff <= 0) {
-            clearInterval(timerId);
-        }
+// класс для создание таймера обратного отсчета
+class CountdownTimer {
+    constructor(deadline, cbChange, cbComplete) {
+        this._deadline = deadline;
+        this._cbChange = cbChange;
+        this._cbComplete = cbComplete;
+        this._timerId = null;
+        this._out = {
+            days: '',
+            hours: '',
+            minutes: '',
+            seconds: ''
+        };
+        this._start();
+    }
+
+    _start() {
+        this._calc();
+        this._timerId = setInterval(this._calc.bind(this), 1000);
+    }
+    _calc() {
+        const diff = this._deadline - new Date();
         const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
         const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
         const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
-        //const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
+
+        this._out.days = days < 10 ? '0' + days : days;
+        this._out.hours = hours < 10 ? '0' + hours : hours;
+        this._out.minutes = minutes < 10 ? '0' + minutes : minutes;
 
 
-
-        $days.textContent = days < 10 ? '0' + days : days;
-        $hours.textContent = hours < 10 ? '0' + hours : hours;
-        $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
-        //$seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
-
-        $days.dataset.title = 'Дни';
-        $hours.dataset.title = 'Часы';
-        $minutes.dataset.title = 'Минуты';
-
-
-        /* $days.dataset.title = declensionNum(days, ['день', 'дня', 'дней']);
-        $hours.dataset.title = declensionNum(hours, ['час', 'часа', 'часов']);
-        $minutes.dataset.title = declensionNum(minutes, ['минута', 'минуты', 'минут']); */
-        // $seconds.dataset.title = declensionNum(seconds, ['секунда', 'секунды', 'секунд']);
+        this._cbChange ? this._cbChange(this._out) : null;
+        if (diff <= 0) {
+            clearInterval(this._timerId);
+            this._cbComplete ? this._cbComplete() : null;
+        }
     }
-    // получаем элементы, содержащие компоненты даты
-    const $days = document.querySelector('.timer__days');
-    const $hours = document.querySelector('.timer__hours');
-    const $minutes = document.querySelector('.timer__minutes');
-    //const $seconds = document.querySelector('.timer__seconds');
-    // вызываем функцию countdownTimer
-    countdownTimer();
-    // вызываем функцию countdownTimer каждую секунду
-    timerId = setInterval(countdownTimer, 1000);
+}
 
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    // первый таймер
+    const elDays1 = document.querySelector('.action-timer .timer__days');
+    const elHours1 = document.querySelector('.action-timer .timer__hours');
+    const elMinutes1 = document.querySelector('.action-timer .timer__minutes');
+    //console.log(elDays1);
+    //console.log(elHours1);
+    //console.log(elMinutes1);
+
+    // Создадание нового объекта, используя new CountdownTimer()
+    new CountdownTimer(deadline1, (timer) => {
+        elDays1.textContent = timer.days;
+        elHours1.textContent = timer.hours;
+        elMinutes1.textContent = timer.minutes;
+    }, () => {});
+
+
+    // второй таймер
+    const elDays2 = document.querySelector('.timer-action .timer__days');
+    const elHours2 = document.querySelector('.timer-action .timer__hours');
+    const elMinutes2 = document.querySelector('.timer-action .timer__minutes');
+    // Создадание нового объекта, используя new CountdownTimer()
+    new CountdownTimer(deadline2, (timer) => {
+        elDays2.textContent = timer.days;
+        elHours2.textContent = timer.hours;
+        elMinutes2.textContent = timer.minutes;
+    }, () => {});
 
 
 
@@ -101,14 +119,14 @@ window.addEventListener("load", function() {
     // JS action animation
     // js animation timer span
     const nowDate = new Date();
-    const timeDifference = deadline - nowDate;
+    const timeDifference = deadline1 - nowDate;
     //
     //console.log(deadline);
     //console.log(nowDate);
     //console.log(timeDifference);
 
-    let timerSpans = document.querySelectorAll('.timer-span');
-    let tr = document.getElementById('timerspan-right');
+    let timerSpans = document.querySelectorAll('.span-timer');
+    //let tr = document.getElementById('timerspan-right');
     //let timeSec = 5;
     let timeSec = timeDifference;
     console.log(timeSec);
@@ -141,6 +159,9 @@ window.addEventListener("load", function() {
 
     }
     setTimeout(spanFade);
+
+
+
 
     // menu
     let header = document.getElementById('header');
