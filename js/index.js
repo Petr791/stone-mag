@@ -13,7 +13,9 @@ class CountdownTimer {
             days: '',
             hours: '',
             minutes: '',
-            seconds: ''
+            daysTitle: '',
+            hoursTitle: '',
+            minutesTitle: ''
         };
         this._start();
     }
@@ -32,6 +34,9 @@ class CountdownTimer {
         this._out.hours = hours < 10 ? '0' + hours : hours;
         this._out.minutes = minutes < 10 ? '0' + minutes : minutes;
 
+        this._out.daysTitle = 'Дни';
+        this._out.hoursTitle = 'Часы';
+        this._out.minutesTitle = 'Минуты';
 
         this._cbChange ? this._cbChange(this._out) : null;
         if (diff <= 0) {
@@ -57,6 +62,10 @@ document.addEventListener('DOMContentLoaded', function() {
         elDays1.textContent = timer.days;
         elHours1.textContent = timer.hours;
         elMinutes1.textContent = timer.minutes;
+
+        elDays1.dataset.title = timer.daysTitle;
+        elHours1.dataset.title = timer.hoursTitle;
+        elMinutes1.dataset.title = timer.minutesTitle;
     }, () => {});
 
 
@@ -69,6 +78,10 @@ document.addEventListener('DOMContentLoaded', function() {
         elDays2.textContent = timer.days;
         elHours2.textContent = timer.hours;
         elMinutes2.textContent = timer.minutes;
+
+        elDays2.dataset.title = timer.daysTitle;
+        elHours2.dataset.title = timer.hoursTitle;
+        elMinutes2.dataset.title = timer.minutesTitle;
     }, () => {});
 
 
