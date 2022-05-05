@@ -182,10 +182,8 @@ window.addEventListener("load", function() {
     let headerMenu = document.getElementById('header-menu');
     let hero = document.getElementById('hero');
 
-
     iconMenu.addEventListener("click", function() {
         //alert("Hello World!");
-
 
         // вертикальное мобильное меню
 
@@ -200,7 +198,6 @@ window.addEventListener("load", function() {
 
         // отступ блока hero из-за того, что header имеет position: absolute и не может подвинуть в низ hero(фоновая картинка в секции hero, а header в макете должен быть над картинкой, но он не находится в main>hero)
         hero.classList.toggle('hero-padding');
-
 
     });
 
