@@ -235,8 +235,15 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-
+// card services-card wow  animate__animated
+wow = new WOW({
+    boxClass: 'wow', // default
+    animateClass: 'animated', // default
+    offset: 0, // default
+    mobile: false, // default
+    live: true // default
+})
+wow.init();
 
 
 
@@ -348,3 +355,61 @@ window.addEventListener("load", function() {
 
 
 });
+
+
+//Изменение фона header  при прокрутке:
+/* (function($) {
+    $(window).on('load scroll', function() {
+        if ($(this).scrollTop() >= '1') {
+            $('.header').css('background', 'orange');
+        } else {
+            $('.header').css('background', 'none');
+        }
+    });
+}); */
+
+
+// 
+
+const header = document.querySelector(".header");
+
+/**
+ * Sticky Header
+ */
+const isWindowScrolled = () => window.scrollY > 100;
+const isStickyHeaderAllowed = () => window.innerWidth >= 768;
+const headerScrolledClass = "header--scrolled";
+let lastScrollY = 0;
+
+function stickyHeader() {
+    if (isWindowScrolled()) {
+        header.classList.add(headerScrolledClass);
+    } else {
+        header.classList.remove(headerScrolledClass);
+    }
+
+    if (window.scrollY > lastScrollY) {
+        header.classList.add("header--hidden");
+    } else {
+        header.classList.remove("header--hidden");
+    }
+
+    setTimeout(() => {
+        lastScrollY = window.scrollY;
+    }, 10);
+}
+
+const debounce = (callback, wait) => {
+    let timeoutId = null;
+    return (...args) => {
+        window.clearTimeout(timeoutId);
+        timeoutId = window.setTimeout(() => {
+            callback.apply(null, args);
+        }, wait);
+    };
+};
+const headerResizeFiexer = debounce(stickyHeader, 30);
+
+window.addEventListener("scroll", headerResizeFiexer);
+window.addEventListener("orientationchange", headerResizeFiexer);
+headerResizeFiexer();
