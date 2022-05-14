@@ -435,7 +435,7 @@ a:visited {
   color: #FFB75E;
 }
 
-/* @STONEMAG  header*/
+/* @ header*/
 .header {
   position: absolute;
   width: 100%;
@@ -475,6 +475,10 @@ a:visited {
   visibility: visible;
   opacity: 1;
   /* border-bottom: 1px solid rgba(255, 255, 255, 0.5); */
+}
+
+.header__link {
+  font-family: 'Gilroy, sans-serif';
 }
 
 .header__link--logo {
@@ -529,6 +533,7 @@ a:visited {
 }
 
 .button--primary {
+  font-family: 'Gilroy, sans-serif';
   font-weight: 700;
   font-size: 1em;
   line-height: 120%;
@@ -563,6 +568,7 @@ a:visited {
 }
 
 .button--secondary {
+  font-family: 'Gilroy, sans-serif';
   border: 1px solid #FFB75E;
   font-size: 1.125em;
   line-height: 18px;
@@ -683,9 +689,10 @@ a:visited {
 }
 
 /*  */
-/* @STONEMAG  .hero*/
+/* @ .hero*/
 .hero {
   background-image: url("../img/hero/bg_img.jpg");
+  background-color: #121212;
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
@@ -697,6 +704,10 @@ a:visited {
   min-height: 1019px;
   color: #ffffff;
   padding-top: 171px;
+}
+
+.hero__container {
+  /*  background-color: #121212; */
 }
 
 .hero__info {
@@ -780,6 +791,7 @@ a:visited {
 }
 
 .hero-card__desc {
+  font-family: 'Gilroy, sans-serif';
   font-weight: 400;
   font-size: 1.125em;
   line-height: 24px;
@@ -791,7 +803,7 @@ a:visited {
   margin-bottom: 0px;
 }
 
-/*  */
+/* .hero-stock */
 .hero-stock {
   border-left: 4px solid #FFB75E;
   padding-left: 25px;
@@ -827,6 +839,7 @@ a:visited {
 }
 
 .hero-stock__desc {
+  font-family: 'Gilroy, sans-serif';
   font-weight: 400;
   font-size: 1em;
   line-height: 24px;
@@ -835,7 +848,7 @@ a:visited {
   padding-bottom: 5px;
 }
 
-/* @ form */
+/*  form */
 .form {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 370px;
@@ -890,6 +903,7 @@ a:visited {
 }
 
 .form__info {
+  font-family: 'Gilroy, sans-serif';
   font-size: 1em;
   line-height: 24px;
   font-weight: 400;
@@ -906,6 +920,7 @@ a:visited {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: 'Gilroy, sans-serif';
   text-align: left;
   font-size: 0.875em;
   line-height: 14px;
@@ -935,6 +950,7 @@ a:visited {
   left: 38px;
   width: 100%;
   display: none;
+  font-family: 'Gilroy, sans-serif';
   color: #ffffff;
   font-size: 0.875em;
   text-transform: uppercase;
@@ -1012,7 +1028,7 @@ a:visited {
   text-decoration: underline;
 }
 
-/* @.form-field--name  and.form-field--phone */
+/* .form-field--name  and.form-field--phone */
 input.form-field__input::-webkit-input-placeholder {
   color: #fff;
   background-color: transparent;
@@ -1052,7 +1068,7 @@ input.form-field__input::placeholder {
   margin-bottom: 20px;
 }
 
-/* @..form-field--attach  and.form-field--submit */
+/* ..form-field--attach  and.form-field--submit */
 .form-field--attach,
 .form-field--submit {
   width: 100%;
@@ -1101,6 +1117,7 @@ input.form-field__input::placeholder {
 }
 
 .input-file__text {
+  font-family: 'Gilroy, sans-serif';
   font-size: 1em;
   color: #FFB75E;
   line-height: 16px;
@@ -1109,6 +1126,7 @@ input.form-field__input::placeholder {
 }
 
 .input-file__text--span {
+  font-family: 'Gilroy, sans-serif';
   font-size: 0.875em;
   line-height: 14px;
   color: #A3A3A3;
@@ -1118,7 +1136,7 @@ input.form-field__input::placeholder {
   display: block;
 }
 
-/* @..form-field--submit */
+/* ..form-field--submit */
 .input-calculate {
   opacity: 0;
   visibility: hidden;
@@ -1132,6 +1150,7 @@ input.form-field__input::placeholder {
 }
 
 .input-calculate__info {
+  font-family: 'Gilroy, sans-serif';
   font-size: 1em;
   color: #FFFFFF;
   line-height: 19px;
@@ -1142,11 +1161,12 @@ input.form-field__input::placeholder {
 }
 
 .input-calculate__info--span {
+  font-family: 'Gilroy, sans-serif';
   font-size: 0.875em;
   line-height: 17px;
 }
 
-/* @..form-field--agree */
+/* ..form-field--agree */
 .form-field--agree {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1197,7 +1217,7 @@ input.form-field__input::placeholder {
           background-size: 50% 50%;
 }
 
-/* @ стили для чекбокса, находящегося в состоянии checked */
+/*  стили для чекбокса, находящегося в состоянии checked */
 .form-field__checkbox:checked + label::before {
   border-color: transparent;
   background-color: rgba(255, 255, 255, 0.25);
@@ -1205,17 +1225,17 @@ input.form-field__input::placeholder {
   background-image: url("../img/form/tick.svg");
 }
 
-/* @ стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+/*  стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
 .form-field__checkbox:focus:not(:checked) + label::before {
   border-color: rgba(255, 255, 255, 0.25);
 }
 
-/* @ стили для чекбокса, находящегося в состоянии disabled */
+/*  стили для чекбокса, находящегося в состоянии disabled */
 .form-field__checkbox:disabled + label::before {
   background-color: rgba(255, 255, 255, 0.25);
 }
 
-/* @ .advantage */
+/*@ .advantage */
 .advantage {
   padding-top: 70px;
   margin-bottom: 60px;
@@ -1268,6 +1288,7 @@ input.form-field__input::placeholder {
 .advantage-card__desc {
   display: inline-block;
   text-align: left;
+  font-family: 'Gilroy, sans-serif';
   font-weight: 500;
   font-size: 1.125em;
   line-height: 150%;
@@ -1358,6 +1379,7 @@ input.form-field__input::placeholder {
 }
 
 .services-card__title {
+  font-family: 'Gilroy, sans-serif';
   font-style: normal;
   font-weight: 700;
   font-size: 1.75em;
@@ -1386,6 +1408,7 @@ input.form-field__input::placeholder {
 }
 
 .selection-step__title {
+  font-family: 'Gilroy, sans-serif';
   font-weight: 700;
   font-size: 1.625em;
   line-height: 150%;
@@ -1404,6 +1427,7 @@ input.form-field__input::placeholder {
 }
 
 .table {
+  font-family: 'Gilroy, sans-serif';
   font-style: normal;
   font-size: 20px;
   line-height: 150%;
@@ -1684,6 +1708,7 @@ input.form-field__input::placeholder {
 }
 
 .action-card__desc {
+  font-family: 'Gilroy, sans-serif';
   font-weight: 400;
   font-size: 20px;
   line-height: 150%;
@@ -1715,6 +1740,7 @@ input.form-field__input::placeholder {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-family: 'Gilroy, sans-serif';
   font-weight: 700;
   font-size: 96px;
   line-height: 100%;
@@ -1746,6 +1772,7 @@ input.form-field__input::placeholder {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
+  font-family: 'Gilroy, sans-serif';
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
@@ -1754,6 +1781,7 @@ input.form-field__input::placeholder {
 }
 
 .timer-span {
+  font-family: 'Gilroy, sans-serif';
   font-size: 96px;
   opacity: 0.5;
   margin: 0px 2px;
@@ -1797,7 +1825,7 @@ input.form-field__input::placeholder {
   margin-top: 0px;
 }
 
-/*@  .examples */
+/*@ .examples */
 .examples {
   margin-bottom: 120px;
 }
@@ -1834,6 +1862,7 @@ input.form-field__input::placeholder {
   border: none;
   outline: none;
   cursor: pointer;
+  font-family: 'Gilroy, sans-serif';
   font-size: 18px;
   line-height: 150%;
   font-weight: 400;
@@ -1962,7 +1991,7 @@ input.form-field__input::placeholder {
 
 
 */
-/*  */
+/*@ .clients*/
 .clients {
   background-image: url("../img/clients/clients-bg.png");
   background-repeat: no-repeat;
@@ -2032,6 +2061,7 @@ input.form-field__input::placeholder {
 }
 
 .clients-card__title {
+  font-family: 'Gilroy, sans-serif';
   font-weight: 700;
   font-size: 22px;
   line-height: 150%;
@@ -2216,6 +2246,7 @@ input.form-field__input::placeholder {
 .profit-item__number {
   width: 80px;
   /* background-color: rgb(145, 43, 145); */
+  font-family: 'Gilroy, sans-serif';
   font-weight: 700;
   font-size: 64px;
   line-height: 100%;
@@ -2227,11 +2258,13 @@ input.form-field__input::placeholder {
 }
 
 .profit-item__number--01 {
-  left: -35px;
+  /* left: -35px; */
+  letter-spacing: 5px;
 }
 
 .profit-item__title {
   display: inline-block;
+  font-family: 'Gilroy, sans-serif';
   font-weight: 700;
   font-size: 22px;
   line-height: 150%;
@@ -2242,6 +2275,7 @@ input.form-field__input::placeholder {
 
 .profit-item__desc {
   display: inline-block;
+  font-family: 'Gilroy, sans-serif';
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -2375,8 +2409,11 @@ input.form-field__input::placeholder {
 }
 
 .profit-tag__title--outline {
+  /* color: #FFFFFF !important;
+        text-shadow: 0px 0px 0px #F5F5F5; */
   color: #FFFFFF !important;
-  text-shadow: 0px 0px 0px #F5F5F5;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #f5f5f542;
 }
 
 .profit-tag__title--center {
@@ -2417,7 +2454,7 @@ input.form-field__input::placeholder {
   display: none;
 }
 
-/*  */
+/*@ .action-second */
 .action-second {
   background-image: url("../img/action/timer-2-bg.png");
   background-repeat: no-repeat;
@@ -2430,12 +2467,7 @@ input.form-field__input::placeholder {
   position: relative;
 }
 
-/* 
-
-
-
-
-*/
+/*@ .guarantee */
 .guarantee {
   margin-bottom: 120px;
 }
@@ -2516,6 +2548,7 @@ input.form-field__input::placeholder {
 }
 
 .guarantee-card__title {
+  font-family: 'Gilroy, sans-serif';
   font-weight: 700;
   font-size: 22px;
   line-height: 150%;
@@ -2525,6 +2558,7 @@ input.form-field__input::placeholder {
 }
 
 .guarantee-card__desc {
+  font-family: 'Gilroy, sans-serif';
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -2812,6 +2846,7 @@ input.form-field__input::placeholder {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: 'Gilroy, sans-serif';
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
@@ -2888,6 +2923,7 @@ input.form-field__input::placeholder {
 
 .accordion__content {
   margin: 0;
+  font-family: 'Gilroy, sans-serif';
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -2900,7 +2936,7 @@ input.form-field__input::placeholder {
   padding: 1px 30px 13px 30px;
 }
 
-/* answers-form */
+/*@ answers-form */
 .answers-form {
   color: white;
   /* margin-top: 48px; */
@@ -2974,6 +3010,7 @@ form-field__placeholder--question
 }
 
 .contacts-card__title {
+  font-family: 'Gilroy, sans-serif';
   font-weight: 700;
   font-size: 22px;
   line-height: 150%;
@@ -2982,6 +3019,7 @@ form-field__placeholder--question
 }
 
 .contacts-card__desc {
+  font-family: 'Gilroy, sans-serif';
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
@@ -3027,6 +3065,10 @@ form-field__placeholder--question
   /* height: 400px; */
 }
 
+iframe {
+  border: 0;
+}
+
 /* 
 
 
@@ -3054,6 +3096,7 @@ form-field__placeholder--question
 }
 
 .footer__link {
+  font-family: 'Gilroy, sans-serif';
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
@@ -3134,6 +3177,15 @@ form-field__placeholder--question
 @media (max-width: 1200px) {
   .answers__container {
     margin-right: auto;
+  }
+}
+
+@media (max-width: 1170px) {
+  .tab {
+    -webkit-mask-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.25) 9px, black 18px, black -webkit-calc(100% - 18px), rgba(0, 0, 0, 0.25) -webkit-calc(100% - 9px), rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.25) 9px, black 18px, black calc(100% - 18px), rgba(0, 0, 0, 0.25) calc(100% - 9px), rgba(0, 0, 0, 0));
+    padding-left: 15px;
+    margin-left: -15px;
   }
 }
 
@@ -3735,6 +3787,9 @@ form-field__placeholder--question
   .tablinks {
     /* margin: 0px 5px 10px 5px; */
   }
+  .profit__wrapper {
+    /* margin-right: 45px; */
+  }
   .profit-content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3760,6 +3815,7 @@ form-field__placeholder--question
     -webkit-order: 2;
         -ms-flex-order: 2;
             order: 2;
+    margin-left: -10px;
   }
   .profit-item {
     margin-bottom: 24px;
@@ -3907,6 +3963,9 @@ form-field__placeholder--question
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .profit__wrapper {
+    /* margin-right: 41px; */
+  }
   .answers {
     padding-top: 0;
   }
@@ -4001,6 +4060,9 @@ form-field__placeholder--question
     font-size: 73px;
     opacity: 0.5;
   }
+  .profit__wrapper {
+    /* margin-right: 41px; */
+  }
   .guarantee {
     margin-bottom: 44px;
   }
@@ -4062,6 +4124,9 @@ form-field__placeholder--question
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .profit__wrapper {
+    /* margin-right: 45px; */
   }
   .profit-item__inner {
     /* padding: 17px 17px 21px 17px; */
@@ -4179,6 +4244,9 @@ form-field__placeholder--question
     width: 31px;
     height: 31px;
   }
+  .profit__wrapper {
+    /*  margin-right: 20px; */
+  }
   .profit-item {
     margin-left: 22px;
   }
@@ -4223,7 +4291,7 @@ form-field__placeholder--question
     left: -23px;
   }
   .profit-item__number--01 {
-    left: -15px;
+    left: -21px;
   }
   .guarantee-cards {
     -ms-grid-columns: (minmax(300px, 300px))[auto-fit];
@@ -4256,6 +4324,12 @@ form-field__placeholder--question
   }
 }
 
+@media (max-width: 380px) {
+  .tablinks {
+    padding: 8px 10px;
+  }
+}
+
 @media (max-width: 350px) {
   .container {
     padding-left: 15px;
@@ -4279,5 +4353,8 @@ form-field__placeholder--question
     row-gap: 60px;
     -ms-grid-columns: 290px;
         grid-template-columns: 290px;
+  }
+  .profit__wrapper {
+    /* margin-right: 18px; */
   }
 }
