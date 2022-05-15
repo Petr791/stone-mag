@@ -3160,10 +3160,13 @@ iframe {
     margin-bottom: 50px;
   }
 
+  .profit-content__qualitatively {
+    overflow-x: visible;
+  }
+
   .profit-items {
     flex: 0 1 100%;
     order: 2;
-    margin-left: -10px;
   }
 
   .profit-item {
@@ -3180,11 +3183,13 @@ iframe {
   .profit-items--right {
     flex: 0 1 60%;
     margin-left: 0px;
+    margin-left: -10px;
   }
 
   .profit-items--left {
     flex: 0 1 60%;
     margin-right: 0px;
+    margin-left: -10px;
   }
 
   .profit-tag {
@@ -3209,6 +3214,7 @@ iframe {
     justify-content: end;
     flex: 0 1 40%;
     margin-right: 0px;
+    /* margin-left: 2px; */
   }
 
   .profit-tag--right {

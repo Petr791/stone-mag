@@ -3853,6 +3853,9 @@ iframe {
             align-items: center;
     margin-bottom: 50px;
   }
+  .profit-content__qualitatively {
+    overflow-x: visible;
+  }
   .profit-items {
     -webkit-box-flex: 0;
     -webkit-flex: 0 1 100%;
@@ -3862,7 +3865,6 @@ iframe {
     -webkit-order: 2;
         -ms-flex-order: 2;
             order: 2;
-    margin-left: -10px;
   }
   .profit-item {
     margin-bottom: 24px;
@@ -3879,6 +3881,7 @@ iframe {
         -ms-flex: 0 1 60%;
             flex: 0 1 60%;
     margin-left: 0px;
+    margin-left: -10px;
   }
   .profit-items--left {
     -webkit-box-flex: 0;
@@ -3886,6 +3889,7 @@ iframe {
         -ms-flex: 0 1 60%;
             flex: 0 1 60%;
     margin-right: 0px;
+    margin-left: -10px;
   }
   .profit-tag {
     margin-bottom: 0px;
@@ -3912,6 +3916,7 @@ iframe {
         -ms-flex: 0 1 40%;
             flex: 0 1 40%;
     margin-right: 0px;
+    /* margin-left: 2px; */
   }
   .profit-tag--right {
     -webkit-box-pack: start;

@@ -2773,8 +2773,6 @@ iframe {
     .tab {
         margin-top: 40px;
     }
-    .examples-card,
-    .examples-card--big {}
     .profit-tag__wrapper {
         text-align: left;
     }
@@ -3020,10 +3018,12 @@ iframe {
         align-items: center;
         margin-bottom: 50px;
     }
+    .profit-content__qualitatively {
+        overflow-x: visible;
+    }
     .profit-items {
         flex: 0 1 100%;
         order: 2;
-        margin-left: -10px;
     }
     .profit-item {
         margin-bottom: 24px;
@@ -3037,10 +3037,12 @@ iframe {
     .profit-items--right {
         flex: 0 1 60%;
         margin-left: 0px;
+        margin-left: -10px;
     }
     .profit-items--left {
         flex: 0 1 60%;
         margin-right: 0px;
+        margin-left: -10px;
     }
     .profit-tag {
         margin-bottom: 0px;
@@ -3061,6 +3063,7 @@ iframe {
         justify-content: end;
         flex: 0 1 40%;
         margin-right: 0px;
+        /* margin-left: 2px; */
     }
     .profit-tag--right {
         justify-content: start;

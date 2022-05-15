@@ -357,16 +357,6 @@ window.addEventListener("load", function() {
 });
 
 
-//Изменение фона header  при прокрутке:
-/* (function($) {
-    $(window).on('load scroll', function() {
-        if ($(this).scrollTop() >= '1') {
-            $('.header').css('background', 'orange');
-        } else {
-            $('.header').css('background', 'none');
-        }
-    });
-}); */
 
 
 // 
@@ -413,3 +403,44 @@ const headerResizeFiexer = debounce(stickyHeader, 30);
 window.addEventListener("scroll", headerResizeFiexer);
 window.addEventListener("orientationchange", headerResizeFiexer);
 headerResizeFiexer();
+
+
+
+
+// header Замена телефона на текст
+const headerTel = document.getElementById('header-tel');
+const headerSvg = document.getElementById('header-svg');
+console.log(headerTel);
+
+
+headerTel.addEventListener("click", function() {
+
+    if (window.innerWidth <= 768) {
+        event.preventDefault();
+        //this.textContent = 'Скопировано!';
+        changeTel();
+    }
+});
+
+function changeTel() {
+
+    let timeSec = 4;
+    let fun = setInterval(timerСhangeTel, 1000);
+
+    function stop() {
+        clearInterval(fun);
+    }
+
+    function timerСhangeTel() {
+        headerTel.textContent = 'Скопировано!';
+        // иконка телефона (проблема с отступами)
+        //headerSvg.style.opacity = '0';
+        timeSec -= 1;
+        if (timeSec < 0) {
+            //headerSvg.style.opacity = '1';
+            headerTel.textContent = '+7 (495) 128-34-97';
+            stop();
+        }
+    }
+
+}
