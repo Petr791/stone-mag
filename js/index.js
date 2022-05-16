@@ -230,6 +230,54 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
+    // Sticky Header
+
+    const headerSticky = document.querySelector(".header");
+
+    /**
+     * Sticky Header
+     */
+    const isWindowScrolled = () => window.scrollY > 100;
+    const isStickyHeaderAllowed = () => window.innerWidth >= 768;
+    const headerScrolledClass = "header--scrolled";
+    let lastScrollY = 0;
+
+    function stickyHeader() {
+        if (isWindowScrolled()) {
+            headerSticky.classList.add(headerScrolledClass);
+        } else {
+            headerSticky.classList.remove(headerScrolledClass);
+        }
+
+        if (window.scrollY > lastScrollY) {
+            headerSticky.classList.add("header--hidden");
+        } else {
+            headerSticky.classList.remove("header--hidden");
+        }
+
+        setTimeout(() => {
+            lastScrollY = window.scrollY;
+        }, 10);
+    }
+
+    const debounce = (callback, wait) => {
+        let timeoutId = null;
+        return (...args) => {
+            window.clearTimeout(timeoutId);
+            timeoutId = window.setTimeout(() => {
+                callback.apply(null, args);
+            }, wait);
+        };
+    };
+    const headerResizeFiexer = debounce(stickyHeader, 30);
+
+    window.addEventListener("scroll", headerResizeFiexer);
+    window.addEventListener("orientationchange", headerResizeFiexer);
+    headerResizeFiexer();
+
+
+
+
     // Второй вариант popup (подходит для простого текста)
     // header  modal.
     /* (function() {
@@ -390,50 +438,7 @@ window.addEventListener("load", function() {
 
 
 
-// Sticky Header
 
-const header = document.querySelector(".header");
-
-/**
- * Sticky Header
- */
-const isWindowScrolled = () => window.scrollY > 100;
-const isStickyHeaderAllowed = () => window.innerWidth >= 768;
-const headerScrolledClass = "header--scrolled";
-let lastScrollY = 0;
-
-function stickyHeader() {
-    if (isWindowScrolled()) {
-        header.classList.add(headerScrolledClass);
-    } else {
-        header.classList.remove(headerScrolledClass);
-    }
-
-    if (window.scrollY > lastScrollY) {
-        header.classList.add("header--hidden");
-    } else {
-        header.classList.remove("header--hidden");
-    }
-
-    setTimeout(() => {
-        lastScrollY = window.scrollY;
-    }, 10);
-}
-
-const debounce = (callback, wait) => {
-    let timeoutId = null;
-    return (...args) => {
-        window.clearTimeout(timeoutId);
-        timeoutId = window.setTimeout(() => {
-            callback.apply(null, args);
-        }, wait);
-    };
-};
-const headerResizeFiexer = debounce(stickyHeader, 30);
-
-window.addEventListener("scroll", headerResizeFiexer);
-window.addEventListener("orientationchange", headerResizeFiexer);
-headerResizeFiexer();
 
 
 

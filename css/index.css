@@ -405,8 +405,8 @@ a:visited {
   /* display: flex;
     flex-direction: column;
      */
-  overflow: hidden;
-  min-height: 100%;
+  /*  overflow: hidden;
+    min-height: 100%; */
 }
 
 .main {
@@ -3677,10 +3677,10 @@ iframe {
   }
   .header-form {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 700px;
-        -ms-flex: 0 0 700px;
-            flex: 0 0 700px;
-    max-width: 100%;
+    -webkit-flex: 0 0 370px;
+        -ms-flex: 0 0 370px;
+            flex: 0 0 370px;
+    max-width: 370px;
   }
   .advantage {
     margin-bottom: 20px;
