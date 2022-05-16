@@ -220,17 +220,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-
+    // accordion
     /*   new ItcAccordion(document.querySelector('.accordion'), {
         alwaysOpen: false
     });
  */
-
     new ItcAccordion(document.querySelector('.accordion'), {
         alwaysOpen: true
     });
 
 
+    // Второй вариант popup (подходит для простого текста)
+    // header  modal.
+    /* (function() {
+        // создаём модальное окно
+        var modal = $modal({
+            title: 'Модальное окно 1',
+            content: 'Содержимое модального окна 1'
+
+        });
+
+        // при клике по кнопке #show-modal
+        document.querySelector('#show-modal').addEventListener('click', function(e) {
+            event.preventDefault();
+            // отобразим модальное окно
+            modal.show();
+        });
+    })(); */
 
 });
 
@@ -244,6 +260,21 @@ wow = new WOW({
     live: true // default
 })
 wow.init();
+
+
+
+
+/* 
+// для карты
+wow3 = new WOW({
+    boxClass: 'wow', // default
+    animateClass: 'animated', // default
+    offset: 0, // default
+    mobile: false, // default
+    live: true // default
+})
+wow3.init();
+*/
 
 
 
@@ -359,7 +390,7 @@ window.addEventListener("load", function() {
 
 
 
-// 
+// Sticky Header
 
 const header = document.querySelector(".header");
 
@@ -407,23 +438,21 @@ headerResizeFiexer();
 
 
 
-// header Замена телефона на текст
+// header. Замена телефона на текст при клике
 const headerTel = document.getElementById('header-tel');
 const headerSvg = document.getElementById('header-svg');
-console.log(headerTel);
-
+//console.log(headerTel);
 
 headerTel.addEventListener("click", function() {
 
     if (window.innerWidth <= 768) {
         event.preventDefault();
         //this.textContent = 'Скопировано!';
-        changeTel();
+        changeTelText();
     }
 });
 
-function changeTel() {
-
+function changeTelText() {
     let timeSec = 4;
     let fun = setInterval(timerСhangeTel, 1000);
 

@@ -9,6 +9,7 @@
     <!-- <link rel="stylesheet" href="./css/simple-adaptive-slider.css"> -->
     <link rel="stylesheet" href="./css/swiper-bundle.css">
     <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
+    <!-- <link rel="stylesheet" href="./css/modal.css"> -->
     <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/index.css">
     <!-- <script src="./js/jQuery v3.6.0.js"></script> -->
@@ -57,7 +58,7 @@
                         <a id="header-tel" class="header__link--tel" href="tel:+74951283497" target="_blank" rel="nofollow">+7 (495) 128-34-97</a>
                     </div>
 
-                    <a class="header__link  button button--secondary" type="button" href="Онлайн-заявка на бесплатный замер" target="_blank" rel="nofollow">Онлайн-заявка на бесплатный замер</a>
+                    <a id="header-popup" class="header__link  button button--secondary popup-link" type="button" href="#popup" target="_blank" rel="nofollow">Онлайн-заявка на бесплатный замер</a>
 
 
                 </div>
@@ -1702,11 +1703,64 @@
             </div>
         </footer>
 
+        <!-- popup -->
+        <!--    animate__animated animate__zoomInUp animate__delay-0s -->
+        <div class="popup" id="popup">
+            <!-- <a href="#header" class="popup__area"></a> -->
+            <div class="popup__body">
+                <div id="popup__content" class="popup__content">
+                    <a href="#header" class="popup__close close-popup">X</a>
+
+
+                    <div class="form header-form">
+                        <div class="form__inner">
+                            <h3 class="form__title form__title--popup">Онлайн-заявка на бесплатный замер</h3>
+                            <!--  <p class="form__info">Задайте их нашему менеджеру!</p> -->
+                            <form id="freesizing-form" action="" method="post">
+                                <!--input name -->
+                                <label class="form-field form-field--name form-field__name--popup">
+												  <input required="5" id="freesizing-name" type="text"  class="form-field__input form-field__input--popup" />
+											  <div class="form-field__placeholder form-field__placeholder--popup form-field__placeholder--name color-text--popup">ВАШЕ ИМЯ </div>
+												  </label>
+                                <!--input phone -->
+                                <label class="form-field form-field--phone form-field__phone--popup">
+											  <input required="5" id="freesizing-phone" type="tel"  class="form-field__input form-field__input--popup" />
+											  <div class="form-field__placeholder form-field__placeholder--phone color-text--popup">Номер телефона <span class="form-field__span">*</span></div>
+									  </label>
+
+                                <!--input Your question -->
+                                <!--  <label class="form-field form-field--question">
+												  <input required="4" id="answers-question" type="text"  class="form-field__input" />
+											  <div class="form-field__placeholder form-field__placeholder--question">Ваш вопрос</div>
+										  </label> -->
+
+                                <!--input submit -->
+                                <label class="form-field form-field--submit">
+										  <input type="submit" name="freeSizing" id="free-sizing" class="input-calculate">
+										  <label for="free-sizing" class="input-calculate__submit button--primary">
+										  <span class="input-calculate__info">ОТПРАВИТЬ ЗАЯВКУ
+									  </label>
+                                </label>
+
+
+                                <label class="form-field form-field--agree">
+										  <input checked type="checkbox" name="checkboxFreesizing" class="form-field__checkbox form-field__checkbox--popup" id="checkbox-freesizing">
+										  <label class="form-field__label--agree" for="checkbox-freesizing"><span class="agree-link" >Согласен c <a href="политикой конфиденциальности"  target="_blank" rel="nofollow"class="agree-link__span">политикой конфиденциальности</a></span></label>
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         </div>
 
 
         <script defer src="./js/dragscroll.js"></script>
+        <!-- modal.js для простых popup -->
+        <!-- <script src="./js/modal.js"></script> -->
+        <script src="./js/popup.js"></script>
         <script src="js/wow.js"></script>
         <script src="./js/swiper-bundle.js"></script>
         <script src="./js/index.js"></script>
