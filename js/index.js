@@ -74,6 +74,9 @@ class CountdownTimer {
 }
  */
 
+
+
+// класс для создания аккордиона
 class ItcAccordion {
     constructor(target, config) {
         this._el = typeof target === 'string' ? document.querySelector(target) : target;
@@ -151,6 +154,11 @@ class ItcAccordion {
         el.classList.contains('accordion__item_show') ? this.hide(el) : this.show(el);
     }
 }
+
+
+
+
+
 
 
 
@@ -296,18 +304,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     })(); */
 
+
+
+
+    // card services-card wow  animate__animated
+    wow = new WOW({
+        boxClass: 'wow', // default
+        animateClass: 'animated', // default
+        offset: 0, // default
+        mobile: false, // default
+        live: true // default
+    })
+    wow.init();
+
+
+
+    // card services-card wow  animate__animated
+    wow = new WOW({
+        boxClass: 'wow', // default
+        animateClass: 'animated', // default
+        offset: 0, // default
+        mobile: false, // default
+        live: true // default
+    })
+    wow.init();
+
 });
 
 
-// card services-card wow  animate__animated
-wow = new WOW({
-    boxClass: 'wow', // default
-    animateClass: 'animated', // default
-    offset: 0, // default
-    mobile: false, // default
-    live: true // default
-})
-wow.init();
+
 
 
 
