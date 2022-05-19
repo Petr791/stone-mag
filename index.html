@@ -15,6 +15,25 @@
     <!-- <script src="./js/jQuery v3.6.0.js"></script> -->
     <!-- <script src="./js/swiper-bundle.js"></script> -->
 
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m, e, t, r, i, k, a) {
+            m[i] = m[i] || function() {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(88836555, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/88836555" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 
 </head>
 
@@ -39,7 +58,7 @@
 									</g>
 									</svg>
 
-                        <a class="header__link--email" href="ZAKAZ@STONE-MAG.RU" target="_blank" rel="nofollow">ZAKAZ@STONE-MAG.RU</a>
+                        <a class="header__link--email" href="mailto:ZAKAZ@STONE-MAG.RU" target="_blank" rel="nofollow">ZAKAZ@STONE-MAG.RU</a>
                     </div>
 
                     <div class="header__link header__link--block">
@@ -55,7 +74,7 @@
 								</defs>
 								</svg>
                         <!-- href="tel:+74951283497" -->
-                        <a id="header-tel" class="header__link--tel" href="tel:+74951283497" target="_blank" rel="nofollow">+7 (495) 128-34-97</a>
+                        <a id="header-tel" class="header__link--tel tel" href="tel:+74951283497" target="_blank" rel="nofollow">+7 (495) 128-34-97</a>
                     </div>
 
                     <a id="header-popup" class="header__link  button button--secondary popup-link" type="button" href="#popup" target="_blank" rel="nofollow">Онлайн-заявка на бесплатный замер</a>
@@ -125,7 +144,7 @@
                             <div class="form__inner">
                                 <h3 class="form__title">УЗНАЙТЕ СТОИМОСТЬ</h3>
                                 <p class="form__info">и получите скидку 20% или разделочную доску из камня в подарок!</p>
-                                <form id="form-main" action="" method="post">
+                                <form id="form-hero" action="" method="post">
                                     <!--input name -->
                                     <label class="form-field form-field--name">                                
 												 <input required="1" id="name-input" type="text"  class="form-field__input" />
@@ -414,7 +433,7 @@
                 </div>
             </section>
 
-            <section class="selection">
+            <section class="selection" id="selection">
                 <div class="container selection__container">
                     <h2 class="title selection__title">ОПРЕДЕЛИТЕ ПОШАГОВО <span class="title__span">ОПТИМАЛЬНЫЕ</span> ПАРАМЕТРЫ ДЛЯ ВАШЕЙ СТОЛЕШНИЦЫ</h2>
                     <h3 class="selection-step__title">Шаг 1: Искусственный камень - лучший материал для столешниц</h3>
@@ -626,7 +645,7 @@
                     </div>
 
                     <div class="btn-selection">
-                        <a class="button button--primary" type="button" href="СМОТРЕТЬ КАТАЛОГ КАМНЯ" target="_blank" rel="nofollow">СМОТРЕТЬ КАТАЛОГ КАМНЯ</a>
+                        <a id="selection-button" class="button button--primary" type="button" href="СМОТРЕТЬ КАТАЛОГ КАМНЯ" target="_blank" rel="nofollow">СМОТРЕТЬ КАТАЛОГ КАМНЯ</a>
                     </div>
                 </div>
 
@@ -1105,11 +1124,6 @@
 
                             <div class="profit-tag profit-tag--right">
 
-                                <div class="profit-tag__box">
-                                    <h3 class="profit-tag__bracket">}</h3>
-                                </div>
-
-
                                 <div class="profit-tag__wrapper profit-tag__wrapper--right">
                                     <h3 class="profit-tag__title profit-tag__title--outline">ВЫГОДНО</h3>
                                     <h3 class="profit-tag__title profit-tag__title--pale">ВЫГОДНО</h3>
@@ -1130,8 +1144,6 @@
                             <div class="profit-tag profit-tag--left">
 
 
-
-
                                 <div class="profit-tag__wrapper profit-tag__wrapper--left">
                                     <h3 class="profit-tag__title profit-tag__title--outline">УДОБНО</h3>
                                     <h3 class="profit-tag__title profit-tag__title--pale">УДОБНО</h3>
@@ -1141,10 +1153,6 @@
                                 </div>
 
                                 <h3 class="profit-tag__title--mobile">УДОБНО</h3>
-
-                                <div class="profit-tag__box profit-tag__box--left">
-                                    <h3 class="profit-tag__bracket">{</h3>
-                                </div>
                             </div>
 
                             <div class="profit-items profit-items--right">
@@ -1236,11 +1244,6 @@
 
                             <div class="profit-tag  profit-tag--right">
 
-                                <div class="profit-tag__box">
-                                    <h3 class="profit-tag__bracket">}</h3>
-                                </div>
-
-
                                 <div class="profit-tag__wrapper profit-tag__wrapper--right">
                                     <h3 class="profit-tag__title profit-tag__title--outline">КАЧЕСТВЕННО</h3>
                                     <h3 class="profit-tag__title profit-tag__title--pale">КАЧЕСТВЕННО</h3>
@@ -1291,7 +1294,7 @@
                         <div class="form__inner">
                             <h3 class="form__title">УЗНАЙТЕ СТОИМОСТЬ</h3>
                             <p class="form__info">и получите купон на скидку 20% или мойку в подарок!</p>
-                            <form id="action-form" action="" method="post">
+                            <form id="form-price" action="" method="post">
                                 <!--input name -->
                                 <label class="form-field form-field--name">                                
 									  <input required="3" id="action-name" type="text"  class="form-field__input" />
@@ -1612,7 +1615,7 @@
                             <div class="form__inner">
                                 <h3 class="form__title">ОСТАЛИСЬ ВОПРОСЫ?</h3>
                                 <p class="form__info">Задайте их нашему менеджеру!</p>
-                                <form id="answers-form" action="" method="post">
+                                <form id="form-answers" action="" method="post">
                                     <!--input name -->
                                     <label class="form-field form-field--name">
 															<input required="4" id="answers-name" type="text"  class="form-field__input" />
@@ -1660,13 +1663,15 @@
                         <div class="card contacts-card">
                             <div class="contacts-card__img  contacts-card__img--phone"></div>
                             <h4 class="contacts-card__title">Телефон:</h4>
-                            <p class="contacts-card__desc">+7 (495) 128-34-97</p>
+                            <a id="contacts-tel" class="contacts-card__desc tel" href="tel:+74951283497">+7 (495) 128-34-97</a>
                         </div>
 
                         <div class="card contacts-card">
                             <div class="contacts-card__img contacts-card__img--email "></div>
                             <h4 class="contacts-card__title">E-mail:</h4>
-                            <p class="contacts-card__desc">zakaz@stone-mag.ru </p>
+                            <!-- <p class="contacts-card__desc"></p> -->
+                            <a class="contacts-card__desc contacts-card__link" href="mailto:zakaz@stone-mag.ru">zakaz@stone-mag.ru</a>
+
                         </div>
 
                         <div class="card contacts-card">
@@ -1709,22 +1714,22 @@
             <!-- <a href="#header" class="popup__area"></a> -->
             <div class="popup__body">
                 <div id="popup__content" class="popup__content">
-                    <a href="#header" class="popup__close close-popup">X</a>
+                    <a href="#header" class="popup__close close-popup">&times</a>
 
 
                     <div class="form header-form">
                         <div class="form__inner">
                             <h3 class="form__title form__title--popup">Онлайн-заявка на бесплатный замер</h3>
                             <!--  <p class="form__info">Задайте их нашему менеджеру!</p> -->
-                            <form id="freesizing-form" action="" method="post">
+                            <form id="freeprice-form" action="" method="post">
                                 <!--input name -->
                                 <label class="form-field form-field--name form-field__name--popup">
-												  <input required="5" id="freesizing-name" type="text"  class="form-field__input form-field__input--popup" />
+												  <input required="5" id="freeprice-name" type="text"  class="form-field__input form-field__input--popup" />
 											  <div class="form-field__placeholder form-field__placeholder--popup form-field__placeholder--name color-text--popup">ВАШЕ ИМЯ </div>
 												  </label>
                                 <!--input phone -->
                                 <label class="form-field form-field--phone form-field__phone--popup">
-											  <input required="5" id="freesizing-phone" type="tel"  class="form-field__input form-field__input--popup" />
+											  <input required="5" id="freeprice-phone" type="tel"  class="form-field__input form-field__input--popup" />
 											  <div class="form-field__placeholder form-field__placeholder--phone color-text--popup">Номер телефона <span class="form-field__span">*</span></div>
 									  </label>
 
@@ -1736,16 +1741,16 @@
 
                                 <!--input submit -->
                                 <label class="form-field form-field--submit">
-										  <input type="submit" name="freeSizing" id="free-sizing" class="input-calculate">
-										  <label for="free-sizing" class="input-calculate__submit button--primary">
+										  <input type="submit" name="freePrice" id="submit-freeprice" class="input-calculate">
+										  <label for="submit-freeprice" class="input-calculate__submit button--primary">
 										  <span class="input-calculate__info">ОТПРАВИТЬ ЗАЯВКУ
 									  </label>
                                 </label>
 
 
                                 <label class="form-field form-field--agree">
-										  <input checked type="checkbox" name="checkboxFreesizing" class="form-field__checkbox form-field__checkbox--popup" id="checkbox-freesizing">
-										  <label class="form-field__label--agree" for="checkbox-freesizing"><span class="agree-link" >Согласен c <a href="политикой конфиденциальности"  target="_blank" rel="nofollow"class="agree-link__span">политикой конфиденциальности</a></span></label>
+										  <input checked type="checkbox" name="checkboxFreeprice" class="form-field__checkbox form-field__checkbox--popup" id="checkbox-freeprice">
+										  <label class="form-field__label--agree" for="checkbox-freeprice"><span class="agree-link" >Согласен c <a href="политикой конфиденциальности"  target="_blank" rel="nofollow"class="agree-link__span">политикой конфиденциальности</a></span></label>
                                 </label>
                             </form>
                         </div>
