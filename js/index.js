@@ -398,7 +398,7 @@ window.addEventListener("load", function() {
     //let tr = document.getElementById('timerspan-right');
     //let timeSec = 5;
     let timeSec = timeDifference;
-    console.log(timeSec);
+    //console.log(timeSec);
 
     function spanFade() {
         let fun = setInterval(timerSpanFade, 1000);
