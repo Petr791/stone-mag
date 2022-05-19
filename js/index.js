@@ -1,5 +1,5 @@
-const deadline1 = new Date(2022, 04, 24);
-const deadline2 = new Date(2022, 04, 18);
+const deadline1 = new Date(2022, 05, 24);
+const deadline2 = new Date(2022, 05, 18);
 
 
 // класс для создание таймера обратного отсчета
@@ -319,15 +319,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    // card services-card wow  animate__animated
-    wow = new WOW({
-        boxClass: 'wow', // default
-        animateClass: 'animated', // default
-        offset: 0, // default
-        mobile: false, // default
-        live: true // default
-    })
-    wow.init();
+    // Событие отправки формы
+    let formHero = document.querySelector('#form-hero');
+    //console.log(formHero);
+    formHero.addEventListener('submit', (event) => {
+        event.preventDefault();
+        console.log("форма 'form-hero' отправлена!");
+    });
+
+
+    let formAction = document.querySelector('#form-action');
+    formAction.addEventListener('submit', (event) => {
+        event.preventDefault();
+        console.log("форма 'form-action' отправлена!");
+    });
+
+
+    let formPrice = document.querySelector('#form-price');
+    formPrice.addEventListener('submit', (event) => {
+        event.preventDefault();
+        console.log("форма 'form-price' отправлена!");
+    });
+
+
+    let formAnswers = document.querySelector('#form-answers');
+    formAnswers.addEventListener('submit', (event) => {
+        event.preventDefault();
+        console.log("форма 'form-answers' отправлена!");
+    });
+
+
+    //popup form
+    let freepriceForm = document.querySelector('#freeprice-form');
+    freepriceForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        console.log("форма 'freeprice-form' отправлена!");
+    });
+
 
 });
 
@@ -468,21 +496,63 @@ window.addEventListener("load", function() {
 
 
 
-// header. Замена телефона на текст при клике
-const headerTel = document.getElementById('header-tel');
-const headerSvg = document.getElementById('header-svg');
-//console.log(headerTel);
+// header and contacts. Замена телефона на текст при клике
+// Второй вариат. Для массива элементов
 
-headerTel.addEventListener("click", function() {
 
-    if (window.innerWidth <= 768) {
+//const headerTel = document.getElementById('header-tel');
+//const headerSvg = document.getElementById('header-svg');
+//const contactsTel = document.getElementById('contacts-tel');
+
+let tels = document.querySelectorAll('.tel');
+//console.log(tels);
+tels.forEach(function(item, i, tels) {
+
+    let elem = item;
+    elem.addEventListener("click", function() {
+
+        if (window.innerWidth >= 768) {
+            event.preventDefault();
+
+            function changeTelText() {
+                let timeSec = 4;
+                let fun = setInterval(timerСhangeTel, 1000);
+
+                function stop() {
+                    clearInterval(fun);
+                }
+
+                function timerСhangeTel() {
+                    elem.textContent = 'Скопировано!';
+                    timeSec -= 1;
+                    if (timeSec < 0) {
+                        elem.textContent = '+7 (495) 128-34-97';
+                        stop();
+                    }
+                }
+            }
+
+            changeTelText();
+
+        }
+    });
+});
+
+
+
+
+
+
+// Первый вариант только для header-tel
+/* headerTel.addEventListener("click", function(e) {
+    if (window.innerWidth >= 768) {
         event.preventDefault();
         //this.textContent = 'Скопировано!';
         changeTelText();
     }
-});
+}); */
 
-function changeTelText() {
+/* function changeTelText() {
     let timeSec = 4;
     let fun = setInterval(timerСhangeTel, 1000);
 
@@ -502,4 +572,22 @@ function changeTelText() {
         }
     }
 
-}
+} */
+
+
+
+
+
+
+
+// selection-button. Плавное перемещение к selection
+const smoothLink = document.getElementById('selection-button');
+
+smoothLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('selection').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+
+});

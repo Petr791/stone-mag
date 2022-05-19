@@ -26,15 +26,7 @@ if (popupLinks.length > 0) {
 
 
 
-//  добавление классов анимации popup
-function addPopupClass() {
-    popupContent.classList.add('animate__animated', 'animate__zoomInUp', 'animate__delay-0s');
-}
 
-// удаление классов анимации popup
-function removePopupClass() {
-    popupContent.classList.remove('animate__animated', 'animate__zoomInUp', 'animate__delay-0s');
-}
 
 
 
@@ -123,7 +115,20 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
+//  добавление классов анимации popup
+function addPopupClass() {
+    //popupContent.classList.add('animate__animated', 'animate__zoomInUp', 'animate__delay-0s');
 
+    popupContent.classList.add('animate__animated', 'animate__fadeInUp');
+
+}
+
+// удаление классов анимации popup
+function removePopupClass() {
+    //popupContent.classList.remove('animate__animated', 'animate__zoomInUp', 'animate__delay-0s');
+
+    popupContent.classList.remove('animate__animated', 'animate__fadeInUp');
+}
 
 /* 
 

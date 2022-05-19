@@ -23,16 +23,6 @@ if (popupLinks.length > 0) {
   for (var index = 0; index < popupLinks.length; index++) {
     _loop(index);
   }
-} //  добавление классов анимации popup
-
-
-function addPopupClass() {
-  popupContent.classList.add('animate__animated', 'animate__zoomInUp', 'animate__delay-0s');
-} // удаление классов анимации popup
-
-
-function removePopupClass() {
-  popupContent.classList.remove('animate__animated', 'animate__zoomInUp', 'animate__delay-0s');
 }
 
 var popupCloseIcon = document.querySelectorAll('.close-popup');
@@ -125,13 +115,25 @@ document.addEventListener('keydown', function (e) {
     var popupActive = document.querySelector('.popup.open');
     popupClose(popupActive);
   }
-});
+}); //  добавление классов анимации popup
+
+function addPopupClass() {
+  //popupContent.classList.add('animate__animated', 'animate__zoomInUp', 'animate__delay-0s');
+  popupContent.classList.add('animate__animated', 'animate__fadeInUp');
+} // удаление классов анимации popup
+
+
+function removePopupClass() {
+  //popupContent.classList.remove('animate__animated', 'animate__zoomInUp', 'animate__delay-0s');
+  popupContent.classList.remove('animate__animated', 'animate__fadeInUp');
+}
 /* 
 
 Полифилы
 подгоняет параметры под старые браузеры
 
 */
+
 
 (function () {
   // проверяем поддержку
