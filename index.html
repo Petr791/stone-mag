@@ -112,6 +112,7 @@
                             <div class="cards hero-cards">
                                 <div class="hero-card">
                                     <picture class="hero-card__pic">
+                                        <source srcset="./img/hero/hero-bullet-cremlin.webp" type="image/webp">
                                         <img class="hero-card__img" src="./img/hero/hero-bullet-cremlin.svg" alt="hero-card__icon">
                                     </picture>
                                     <div class="hero-card__benefit">
@@ -122,6 +123,7 @@
                             <div class="cards hero-cards hero-cards--bottom">
                                 <div class="hero-card hero-card--left">
                                     <picture class="hero-card__pic">
+                                        <source srcset="./img/hero/hero-bullet-production.webp" type="image/webp">
                                         <img class="hero-card__img" src="./img/hero/hero-bullet-production.svg" alt="hero-card__icon">
                                     </picture>
                                     <div class="hero-card__benefit">
@@ -130,6 +132,7 @@
                                 </div>
                                 <div class="hero-card">
                                     <picture class="hero-card__pic">
+                                        <source srcset="./img/hero/hero-warranty.webp" type="image/webp">
                                         <img class="hero-card__img" src="./img/hero/hero-warranty.svg" alt="hero-card__icon">
                                     </picture>
                                     <div class="hero-card__benefit">
@@ -169,7 +172,7 @@
 
                                     <!--input submit -->
                                     <label class="form-field form-field--submit">
-													<input type="submit" name="inputCalculate" id="input-calculate" class="input-calculate">
+													<input  type="submit" name="inputCalculate" id="input-calculate" class="input-calculate">
 													<label for="input-calculate" class="input-calculate__submit button--primary">
 													<span class="input-calculate__info">РАССЧИТАТЬ СТОИМОСТЬ
 														<span class="input-calculate__info--span" ><br>+ забронировать акцию</span></span>
@@ -201,6 +204,7 @@
                             <div class="advantage-card__icon">
 
                                 <picture class="advantage-card__pic">
+                                    <source srcset="./img/advantage/features-1.webp" type="image/webp">
                                     <img class="advantage-card__img" src="./img/advantage/features-1.svg" alt="advantage__icon">
                                 </picture>
 
@@ -211,6 +215,7 @@
                             <div class="advantage-card__icon">
 
                                 <picture class="advantage-card__pic">
+                                    <source srcset="./img/advantage/features-2.webp" type="image/webp">
                                     <img class="advantage-card__img" src="./img/advantage/features-2.svg" alt="advantage__icon">
                                 </picture>
 
@@ -221,6 +226,7 @@
                             <div class="advantage-card__icon">
 
                                 <picture class="advantage-card__pic">
+                                    <source srcset="./img/advantage/features-3.webp" type="image/webp">
                                     <img class="advantage-card__img" src="./img/advantage/features-3.svg" alt="advantage__icon">
                                 </picture>
 
@@ -231,6 +237,7 @@
                             <div class="advantage-card__icon">
 
                                 <picture class="advantage-card__pic">
+                                    <source srcset="./img/advantage/features-4.webp" type="image/webp">
                                     <img class="advantage-card__img" src="./img/advantage/features-4.svg" alt="advantage__icon">
                                 </picture>
 
@@ -241,6 +248,7 @@
                             <div class="advantage-card__icon">
 
                                 <picture class="advantage-card__pic">
+                                    <source srcset="./img/advantage/features-5.webp" type="image/webp">
                                     <img class="advantage-card__img" src="./img/advantage/features-5.svg" alt="advantage__icon">
                                 </picture>
 
@@ -251,6 +259,7 @@
                             <div class="advantage-card__icon">
 
                                 <picture class="advantage-card__pic">
+                                    <source srcset="./img/advantage/calendar6.webp" type="image/webp">
                                     <img class="advantage-card__img" src="./img/advantage/calendar6.svg" alt="advantage__icon">
                                 </picture>
 
@@ -262,7 +271,7 @@
                 </div>
             </section>
 
-            <section class="services">
+            <section class="services  lazy" data-bg="./img/services/portfolio-bg.jpg">
                 <div class="container services__container">
                     <h2 class="title services__title">НАШИ ИЗДЕЛИЯ И УСЛУГИ</h2>
                     <div class="cards services-cards ">
@@ -271,7 +280,8 @@
                         <article class="card services-card wow  animate__animated animate__fadeInUp animate__delay-1s">
                             <a href="Столешницы" class="services-card__link" target="_blank">
                                 <picture class="services-card__pic">
-                                    <img src="./img/services/portfolio-1.png" alt="Столешницы" class="services-card__img">
+                                    <source srcset="./img/services/portfolio-1.webp" type="image/webp">
+                                    <img data-src="./img/services/portfolio-1.jpg" src="./img/services/portfolio-1.jpg" alt="Столешницы" class="services-card__img lazy">
                                 </picture>
 
                                 <span class="services-card__wrapper">
@@ -288,7 +298,8 @@
                         <article class="card services-card  wow animate__animated animate__fadeInUp animate__delay-2s ">
                             <a href="Столешницы для кухни" class="services-card__link" target="_blank">
                                 <picture class="services-card__pic">
-                                    <img src="./img/services/portfolio-2.png" alt="Столешницы для кухни" class="services-card__img">
+                                    <source srcset="./img/services/portfolio-2.webp" type="image/webp">
+                                    <img data-src="./img/services/portfolio-2.jpg" src="./img/services/portfolio-2.jpg" alt="Столешницы для кухни" class="services-card__img lazy">
                                 </picture>
                                 <span class="services-card__wrapper">
 										<span class="services-card__title">Столешницы<br> для кухни</span>
@@ -304,7 +315,8 @@
                         <article class="card services-card  wow animate__animated animate__fadeInUp animate__delay-3s">
                             <a href="Подоконники из камня" class="services-card__link" target="_blank">
                                 <picture class="services-card__pic">
-                                    <img src="./img/services/portfolio-3.png" alt="Подоконники из камня" class="services-card__img">
+                                    <source srcset="./img/services/portfolio-3.webp" type="image/webp">
+                                    <img data-src="./img/services/portfolio-3.jpg" src="./img/services/portfolio-3.jpg" alt="Подоконники из камня" class="services-card__img lazy">
                                 </picture>
                                 <span class="services-card__wrapper">
 											 <span class="services-card__title">Подоконники<br> из камня</span>
@@ -319,7 +331,8 @@
                         <article class="card services-card wow  animate__animated animate__fadeInUp animate__delay-2s">
                             <a href="Столешницы в ванную комнату" class="services-card__link" target="_blank">
                                 <picture class="services-card__pic">
-                                    <img src="./img/services/portfolio-4.png" alt="Столешницы в ванную комнату" class="services-card__img">
+                                    <source srcset="./img/services/portfolio-4.webp" type="image/webp">
+                                    <img data-src="./img/services/portfolio-4.jpg" src="./img/services/portfolio-4.jpg" alt="Столешницы в ванную комнату" class="services-card__img lazy">
                                 </picture>
                                 <span class="services-card__wrapper">
 											<span class="services-card__title">Столешницы<br> в ванную комнату</span>
@@ -334,7 +347,8 @@
                         <article class="card services-card wow  animate__animated animate__fadeInUp animate__delay-3s">
                             <a href="Барные стойки" class="services-card__link" target="_blank">
                                 <picture class="services-card__pic">
-                                    <img src="./img/services/portfolio-5.png" alt="Барные стойки" class="services-card__img">
+                                    <source srcset="./img/services/portfolio-5.webp" type="image/webp">
+                                    <img data-src="./img/services/portfolio-5.jpg" src="./img/services/portfolio-5.jpg" alt="Барные стойки" class="services-card__img lazy">
                                 </picture>
                                 <span class="services-card__wrapper">
 											<span class="services-card__title">Барные стойки </span>
@@ -352,7 +366,8 @@
                         <article class="card services-card wow  animate__animated animate__fadeInUp animate__delay-4s">
                             <a href="Стойки ресепшн" class="services-card__link" target="_blank">
                                 <picture class="services-card__pic">
-                                    <img src="./img/services/portfolio-6.png" alt="Стойки ресепшн" class="services-card__img">
+                                    <source srcset="./img/services/portfolio-6.webp" type="image/webp">
+                                    <img data-src="./img/services/portfolio-6.jpg" src="./img/services/portfolio-6.jpg" alt="Стойки ресепшн" class="services-card__img lazy">
                                 </picture>
                                 <span class="services-card__wrapper">
 											<span class="services-card__title">Стойки ресепшн</span>
@@ -367,7 +382,8 @@
                         <article class="card services-card wow  animate__animated animate__fadeInUp animate__delay-3s">
                             <a href="Эксклюзивные изделия" class="services-card__link" target="_blank">
                                 <picture class="services-card__pic">
-                                    <img src="./img/services/portfolio-7.png" alt="Эксклюзивные изделия" class="services-card__img">
+                                    <source srcset="./img/services/portfolio-7.webp" type="image/webp">
+                                    <img data-src="./img/services/portfolio-7.jpg" src="./img/services/portfolio-7.jpg" alt="Эксклюзивные изделия" class="services-card__img lazy">
                                 </picture>
                                 <span class="services-card__wrapper">
 										  <span class="services-card__title">Эксклюзивные<br> изделия</span>
@@ -384,7 +400,8 @@
                         <article class="card services-card wow  animate__animated animate__fadeInUp animate__delay-4s">
                             <a href="Ступени и лестницы" class="services-card__link" target="_blank">
                                 <picture class="services-card__pic">
-                                    <img src="./img/services/portfolio-8.png" alt="Ступени и лестницы" class="services-card__img">
+                                    <source srcset="./img/services/portfolio-8.webp" type="image/webp">
+                                    <img data-src="./img/services/portfolio-8.jpg" src="./img/services/portfolio-8.jpg" alt="Ступени и лестницы" class="services-card__img lazy">
                                 </picture>
                                 <span class="services-card__wrapper">
 										  <span class="services-card__title">Ступени<br> и лестницы</span>
@@ -399,7 +416,8 @@
                         <article class="card services-card wow  animate__animated animate__fadeInUp animate__delay-5s">
                             <a href="Камины" class="services-card__link" target="_blank">
                                 <picture class="services-card__pic">
-                                    <img src="./img/services/portfolio-9.png" alt="Камины" class="services-card__img">
+                                    <source srcset="./img/services/portfolio-9.webp" type="image/webp">
+                                    <img data-src="./img/services/portfolio-9.jpg" src="./img/services/portfolio-9.jpg" alt="Камины" class="services-card__img lazy">
                                 </picture>
                                 <span class="services-card__wrapper">
 										 <span class="services-card__title">Камины</span>
@@ -416,7 +434,8 @@
                         <article class="card services-card wow  animate__animated animate__fadeInUp animate__delay-5s">
                             <a href="Столы" class="services-card__link" target="_blank">
                                 <picture class="services-card__pic">
-                                    <img src="./img/services/portfolio-10.png" alt="Столы" class="services-card__img">
+                                    <source srcset="./img/services/portfolio-10.webp" type="image/webp" data-sizes="100w">
+                                    <img data-src="./img/services/portfolio-10.jpg" src="./img/services/portfolio-10.jpg" alt="Столы" class="services-card__img lazy" data-sizes="100w">
                                 </picture>
                                 <span class="services-card__wrapper">
 										<span class="services-card__title">Столы</span>
@@ -1763,6 +1782,7 @@
 
 
         <script defer src="./js/dragscroll.js"></script>
+        <script src="./js/lazyload.js"></script>
         <!-- modal.js для простых popup -->
         <!-- <script src="./js/modal.js"></script> -->
         <script src="./js/popup.js"></script>
