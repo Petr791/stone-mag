@@ -1231,7 +1231,7 @@ input.form-field__input--popup::placeholder {
 
 /*@  .services*/
 .services {
-  background-image: url("../img/services/portfolio-bg.jpg");
+  background-image: url("../img/services/portfolio-bg.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
