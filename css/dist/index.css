@@ -2270,8 +2270,13 @@ input.form-field__input--popup::placeholder {
   align-items: center; */
   width: 100%;
   max-width: 979px;
+  /* img {
+      display: block;
+      width: 100%;
+  } */
 }
-.swiper-slide img {
+
+.swiper-slide__img {
   display: block;
   width: 100%;
 }

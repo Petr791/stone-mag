@@ -2187,10 +2187,15 @@ input.form-field__input--popup::placeholder {
     align-items: center; */
     width: 100%;
     max-width: 979px;
-    img {
+    /* img {
         display: block;
         width: 100%;
-    }
+    } */
+}
+
+.swiper-slide__img {
+    display: block;
+    width: 100%;
 }
 
 .swiper-button-prev.swiper-button-disabled,
