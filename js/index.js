@@ -47,33 +47,6 @@ class CountdownTimer {
 }
 
 
-/* class ItcAccordion {
-    constructor(target, config) {
-        this._el = typeof target === 'string' ? document.querySelector(target) : target;
-        const defaultConfig = {
-            alwaysOpen: true
-        };
-        this._config = Object.assign(defaultConfig, config);
-        this.addEventListener();
-    }
-    addEventListener() {
-        this._el.addEventListener('click', (e) => {
-            const elHeader = e.target.closest('.accordion__header');
-            if (!elHeader) {
-                return;
-            }
-            if (!this._config.alwaysOpen) {
-                const elOpenItem = this._el.querySelector('.accordion__item_show');
-                if (elOpenItem) {
-                    elOpenItem !== elHeader.parentElement ? elOpenItem.classList.toggle('accordion__item_show') : null;
-                }
-            }
-            elHeader.parentElement.classList.toggle('accordion__item_show');
-        });
-    }
-}
- */
-
 
 
 // класс для создания аккордиона
@@ -285,28 +258,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-    // Второй вариант popup (подходит для простого текста)
-    // header  modal.
-    /* (function() {
-        // создаём модальное окно
-        var modal = $modal({
-            title: 'Модальное окно 1',
-            content: 'Содержимое модального окна 1'
-
-        });
-
-        // при клике по кнопке #show-modal
-        document.querySelector('#show-modal').addEventListener('click', function(e) {
-            event.preventDefault();
-            // отобразим модальное окно
-            modal.show();
-        });
-    })(); */
-
-
-
-
     // card services-card wow  animate__animated
     wow = new WOW({
         boxClass: 'wow', // default
@@ -389,16 +340,11 @@ window.addEventListener("load", function() {
     // js animation timer span
     const nowDate = new Date();
     const timeDifference = deadline1 - nowDate;
-    //
-    //console.log(deadline);
-    //console.log(nowDate);
-    //console.log(timeDifference);
+
 
     let timerSpans = document.querySelectorAll('.span-timer');
-    //let tr = document.getElementById('timerspan-right');
-    //let timeSec = 5;
+
     let timeSec = timeDifference;
-    //console.log(timeSec);
 
     function spanFade() {
         let fun = setInterval(timerSpanFade, 1000);
@@ -537,45 +483,6 @@ tels.forEach(function(item, i, tels) {
         }
     });
 });
-
-
-
-
-
-
-// Первый вариант только для header-tel
-/* headerTel.addEventListener("click", function(e) {
-    if (window.innerWidth >= 768) {
-        event.preventDefault();
-        //this.textContent = 'Скопировано!';
-        changeTelText();
-    }
-}); */
-
-/* function changeTelText() {
-    let timeSec = 4;
-    let fun = setInterval(timerСhangeTel, 1000);
-
-    function stop() {
-        clearInterval(fun);
-    }
-
-    function timerСhangeTel() {
-        headerTel.textContent = 'Скопировано!';
-        // иконка телефона (проблема с отступами)
-        //headerSvg.style.opacity = '0';
-        timeSec -= 1;
-        if (timeSec < 0) {
-            //headerSvg.style.opacity = '1';
-            headerTel.textContent = '+7 (495) 128-34-97';
-            stop();
-        }
-    }
-
-} */
-
-
-
 
 
 

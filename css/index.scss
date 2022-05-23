@@ -43,12 +43,6 @@ html {
     font-size: 16px;
 }
 
-
-/* html {
-    scroll-behavior: smooth;
-}
- */
-
 html,
 body {
     height: 100%;
@@ -125,11 +119,7 @@ a:visited {
     /* position: fixed; */
     top: 0;
     // .header__container
-    &__container {
-        /*  width: 100%;
-        max-width: 100%; */
-        /* padding-top: 25px; */
-    }
+    &__container {}
     // .header__links
     &__links {
         display: flex;
@@ -138,7 +128,6 @@ a:visited {
         font-size: 1em;
         text-align: center;
         flex-wrap: nowrap;
-        /* overflow-x: auto; */
         white-space: nowrap;
         height: 100px;
         visibility: visible;
@@ -425,8 +414,6 @@ a:visited {
 .hero-stock {
     border-left: 4px solid #FFB75E;
     padding-left: 25px;
-    /* margin-top: 27px;
-    margin-top: 46px; */
     margin-bottom: 70px;
     position: relative;
     display: inline-block;
@@ -547,34 +534,8 @@ a:visited {
         text-transform: uppercase;
         padding-left: 2px;
     }
-    &__placeholder--name {
-        &::after {
-            /*  content: "";
-            display: block;
-            background: url("../img/form/from3.svg") no-repeat;
-            background-position: center center;
-            background-size: cover;
-            background-size: 15px 15px;
-            width: 15px;
-            height: 15px;
-            float: left;
-            margin: -2px 14px 0 3px; */
-        }
-    }
-    &__placeholder--phone {
-        &::after {
-            /*  content: "";
-            display: block;
-            background: url("../img/form/from1.svg") no-repeat;
-            background-position: center center;
-            background-size: cover;
-            background-size: 15px 15px;
-            width: 15px;
-            height: 15px;
-            float: left;
-            margin: -2px 14px 0 3px; */
-        }
-    }
+    &__placeholder--name {}
+    &__placeholder--phone {}
     // .form-field__checkbox
     &__checkbox {
         position: absolute;
@@ -2058,20 +2019,6 @@ input.form-field__input--popup::placeholder {
     }
 }
 
-
-/* .guarantee-card {
-    // .guarantee-card__pic
-    &__pic {
-        display: block;
-    }
-    // .guarantee-card__img
-    &__img {
-        display: block;
-        width: 310px;
-        max-width: 310px;
-    }
-} */
-
 .guarantee-card:nth-child(even) {
     background-color: #FFBC6A;
 }
@@ -2182,15 +2129,8 @@ input.form-field__input--popup::placeholder {
 .swiper-wrapper {}
 
 .swiper-slide {
-    /*  display: flex;
-    justify-content: center;
-    align-items: center; */
     width: 100%;
     max-width: 979px;
-    /* img {
-        display: block;
-        width: 100%;
-    } */
 }
 
 .swiper-slide__img {
@@ -2288,7 +2228,6 @@ input.form-field__input--popup::placeholder {
 .answers__container {}
 
 .answers-wrapper {
-    /* border: 1px solid rgb(233, 137, 11); */
     display: flex;
     justify-content: space-between;
     width: 100%;
