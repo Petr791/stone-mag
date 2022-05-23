@@ -1195,7 +1195,7 @@ input.form-field__input--popup::placeholder {
 
 /*@  .services*/
 .services {
-  background-image: url("../img/services/portfolio-bg.png");
+  /* background-image: url('../img/services/portfolio-bg.png'); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1501,7 +1501,7 @@ input.form-field__input--popup::placeholder {
 
 /*@ .action  */
 .action {
-  background-image: url("../img/action/promo-bg.png");
+  /* background-image: url('../img/action/promo-bg.png'); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1764,7 +1764,7 @@ input.form-field__input--popup::placeholder {
 */
 /*@ .clients*/
 .clients {
-  background-image: url("../img/clients/clients-bg.png");
+  /* background-image: url('../img/clients/clients-bg.png'); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -2044,7 +2044,7 @@ input.form-field__input--popup::placeholder {
 
 /*@ .action-second */
 .action-second {
-  background-image: url("../img/action/timer-2-bg.png");
+  /* background-image: url('../img/action/timer-2-bg.png'); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -2136,37 +2136,37 @@ input.form-field__input--popup::placeholder {
 }
 
 .guarantee-card:nth-child(1) .guarantee-card__content {
-  background-image: url("../img/guarantee/price-bg-1.svg");
+  /* background-image: url('../img/guarantee/price-bg-1.svg'); */
   background-repeat: no-repeat;
   /* background-size: 310px 310px; */
 }
 
 .guarantee-card:nth-child(2) .guarantee-card__content {
-  background-image: url("../img/guarantee/vector-2.svg");
+  /* background-image: url('../img/guarantee/vector-2.svg'); */
   background-repeat: no-repeat;
   /* background-size: 310px 310px; */
 }
 
 .guarantee-card:nth-child(3) .guarantee-card__content {
-  background-image: url("../img/guarantee/vector-3.svg");
+  /* background-image: url('../img/guarantee/vector-3.svg'); */
   background-repeat: no-repeat;
   /*  background-size: 310px 310px; */
 }
 
 .guarantee-card:nth-child(4) .guarantee-card__content {
-  background-image: url("../img/guarantee/vector-4.svg");
+  /* background-image: url('../img/guarantee/vector-4.svg'); */
   background-repeat: no-repeat;
   /* background-size: 310px 310px; */
 }
 
 .guarantee-card:nth-child(5) .guarantee-card__content {
-  background-image: url("../img/guarantee/vector-5.svg");
+  /* background-image: url('../img/guarantee/vector-5.svg'); */
   background-repeat: no-repeat;
   /* background-size: 310px 310px; */
 }
 
 .guarantee-card:nth-child(6) .guarantee-card__content {
-  background-image: url("../img/guarantee/vector-6.svg");
+  /* background-image: url('../img/guarantee/vector-6.svg'); */
   background-repeat: no-repeat;
   background-size: 310px 310px;
 }
@@ -2174,7 +2174,7 @@ input.form-field__input--popup::placeholder {
 /*  */
 /*@ .reviews  */
 .reviews {
-  background-image: url("../img/reviews/testimonials-bg.png");
+  /*  background-image: url('../img/reviews/testimonials-bg.png'); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -2508,28 +2508,28 @@ form-field__placeholder--question
 }
 
 .contacts-card__img--phone {
-  background-image: url("../img/contacts/phone.svg");
+  /* background-image: url('../img/contacts/phone.svg'); */
   background-repeat: no-repeat;
   background-size: 30px 30px;
   background-position: center;
 }
 
 .contacts-card__img--email {
-  background-image: url("../img/contacts/email.svg");
+  /* background-image: url('../img/contacts/email.svg'); */
   background-repeat: no-repeat;
   background-size: 30px 30px;
   background-position: center;
 }
 
 .contacts-card__img--address {
-  background-image: url("../img/contacts/geo.svg");
+  /*  background-image: url('../img/contacts/geo.svg'); */
   background-repeat: no-repeat;
   background-size: 30px 30px;
   background-position: center;
 }
 
 .contacts-card__img--time {
-  background-image: url("../img/contacts/time.svg");
+  /* background-image: url('../img/contacts/time.svg'); */
   background-repeat: no-repeat;
   background-size: 30px 30px;
   background-position: center;

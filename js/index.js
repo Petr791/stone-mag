@@ -308,10 +308,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
+
+
+
+
+
+});
+
+//LazyLoad
+const MmyLazyLoad = new LazyLoad({
+
+    elements_selector: ".lazy"
 });
 
 
 
+// Instance using native lazy loading
+/* const lazyContent = new LazyLoad({
+    use_native: true // <-- there you go
+
+}); */
 
 
 
