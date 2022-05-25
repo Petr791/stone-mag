@@ -308,18 +308,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
+    //LazyLoad
+    const MmyLazyLoad = new LazyLoad({
 
-
+        elements_selector: ".lazy"
+    });
 
 
 
 });
 
 //LazyLoad
-const MmyLazyLoad = new LazyLoad({
+/* const MmyLazyLoad = new LazyLoad({
 
     elements_selector: ".lazy"
-});
+}); */
 
 
 
@@ -514,3 +517,33 @@ smoothLink.addEventListener('click', function(e) {
     });
 
 });
+
+
+// yandex maps loading
+const sectionProfit = document.getElementById('profit');
+let contactsMap = document.getElementById('contacts-map');
+let mapLoaded = false;
+//console.log(sectionProfit);
+
+function scrollingLoadingMap() {
+    if (mapLoaded == false) {
+        window.addEventListener('scroll', loadingMap);
+        mapLoaded = true;
+    }
+    //console.log(mapLoaded);
+}
+
+function loadingMap() {
+    var pos = window.innerHeight;
+    let boxbottom = sectionProfit.getBoundingClientRect().bottom;
+
+    if (boxbottom < pos) {
+        contactsMap.classList.add('animate__animated', 'animate__zoomInUp', 'animate__delay-1s');
+        contactsMap.innerHTML = '<a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.ru/maps/213/moscow/house/grayvoronovskaya_ulitsa_20/Z04YcQRnSk0GQFtvfXtweHtkYA==/?ll=37.738204%2C55.719141&utm_medium=mapframe&utm_source=maps&z=16.8" style="color:#eee;font-size:12px;position:absolute;top:14px;">Грайвороновская улица, 20 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUJU4eH8C" width="100%" height="400" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>';
+
+        //console.log('Классы добавлены! Карта загружена!');
+        window.removeEventListener('scroll', loadingMap);
+    }
+}
+
+scrollingLoadingMap();
