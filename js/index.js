@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     //LazyLoad
-    const MmyLazyLoad = new LazyLoad({
+    const myLazyLoad = new LazyLoad({
 
         elements_selector: ".lazy"
     });
@@ -317,7 +317,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-
+    //reviews slider
+    //new Swiper('.swiper-container');
+    new Swiper('.swiper-container', {
+        // Вывод стрелок навигации
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        // Вывод скроллбара
+        /*  scrollbar: {
+        	  el: '.swiper-scrollbar',
+        	  draggable: true
+         }, */
+        // бесконечный слайдер
+        loop: true,
+        // скорость прокрутки
+        speed: 600,
+        // отступ между слайдами
+        spaceBetween: 30,
+    })
+    myLazyLoad.update();
+    //lazyLoadInstance.update();
 
 
 
@@ -430,30 +454,6 @@ window.addEventListener("load", function() {
 
 
 
-
-    //reviews slider
-    //new Swiper('.swiper-container');
-    new Swiper('.swiper-container', {
-        // Вывод стрелок навигации
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        // Вывод скроллбара
-        /*  scrollbar: {
-             el: '.swiper-scrollbar',
-             draggable: true
-         }, */
-        // бесконечный слайдер
-        loop: true,
-        // скорость прокрутки
-        speed: 600,
-        // отступ между слайдами
-        spaceBetween: 30,
-    })
 
 
 });
