@@ -173,6 +173,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }, () => {});
 
 
+    //LazyLoad
+    const MmyLazyLoad = new LazyLoad({
+
+        elements_selector: ".lazy"
+    });
+
+
 
     // tabs
     const tabButtons = document.querySelectorAll('.tablinks');
@@ -195,8 +202,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (button.dataset.tabContent === tab.dataset.tabContent) {
 
                     tab.classList.add('active')
+
                 }
             })
+
         });
     });
 
@@ -308,11 +317,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    //LazyLoad
-    const MmyLazyLoad = new LazyLoad({
 
-        elements_selector: ".lazy"
-    });
 
 
 
