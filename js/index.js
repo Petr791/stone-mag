@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', function() {
     formHero.addEventListener('submit', (event) => {
         event.preventDefault();
         console.log("форма 'form-hero' отправлена!");
-        submitForm();
+        //submitForm();
     });
 
 
@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', function() {
     formAction.addEventListener('submit', (event) => {
         event.preventDefault();
         console.log("форма 'form-action' отправлена!");
-        submitForm();
+        //submitForm();
     });
 
 
@@ -301,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function() {
     formPrice.addEventListener('submit', (event) => {
         event.preventDefault();
         console.log("форма 'form-price' отправлена!");
-        submitForm();
+        //submitForm();
     });
 
 
@@ -309,7 +309,7 @@ document.addEventListener('DOMContentLoaded', function() {
     formAnswers.addEventListener('submit', (event) => {
         event.preventDefault();
         console.log("форма 'form-answers' отправлена!");
-        submitForm();
+        //submitForm();
     });
 
 
@@ -318,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
     freepriceForm.addEventListener('submit', (event) => {
         event.preventDefault();
         console.log("форма 'freeprice-form' отправлена!");
-        submitForm();
+        //submitForm();
     });
 
 
