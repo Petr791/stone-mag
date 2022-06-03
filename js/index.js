@@ -285,7 +285,6 @@ document.addEventListener('DOMContentLoaded', function() {
     formHero.addEventListener('submit', (event) => {
         event.preventDefault();
         console.log("форма 'form-hero' отправлена!");
-        //submitForm();
     });
 
 
@@ -293,7 +292,6 @@ document.addEventListener('DOMContentLoaded', function() {
     formAction.addEventListener('submit', (event) => {
         event.preventDefault();
         console.log("форма 'form-action' отправлена!");
-        //submitForm();
     });
 
 
@@ -301,7 +299,6 @@ document.addEventListener('DOMContentLoaded', function() {
     formPrice.addEventListener('submit', (event) => {
         event.preventDefault();
         console.log("форма 'form-price' отправлена!");
-        //submitForm();
     });
 
 
@@ -309,7 +306,6 @@ document.addEventListener('DOMContentLoaded', function() {
     formAnswers.addEventListener('submit', (event) => {
         event.preventDefault();
         console.log("форма 'form-answers' отправлена!");
-        //submitForm();
     });
 
 
@@ -318,22 +314,12 @@ document.addEventListener('DOMContentLoaded', function() {
     freepriceForm.addEventListener('submit', (event) => {
         event.preventDefault();
         console.log("форма 'freeprice-form' отправлена!");
-        //submitForm();
     });
 
 
     
     
-    // обнуление формы
-    function submitForm() {
-    // Get the first form with the name
-    // Hopefully there is only one, but there are more, select the correct index
-    var frms = document.querySelectorAll('form');
-    frms.forEach(element => {
-        //frm.submit(); // Submit
-        element.reset(); // Reset
-        return true; // Prevent page refresh
-    });
+  
     
     
     
