@@ -308,18 +308,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
+    //LazyLoad
+    const MmyLazyLoad = new LazyLoad({
 
-
+        elements_selector: ".lazy"
+    });
 
 
 
 });
 
 //LazyLoad
-const MmyLazyLoad = new LazyLoad({
+/* const MmyLazyLoad = new LazyLoad({
 
     elements_selector: ".lazy"
-});
+}); */
 
 
 
