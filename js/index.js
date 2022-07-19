@@ -173,6 +173,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }, () => {});
 
 
+    //LazyLoad
+    const myLazyLoad = new LazyLoad({
+
+        elements_selector: ".lazy"
+    });
+
+
 
     // tabs
     const tabButtons = document.querySelectorAll('.tablinks');
@@ -195,8 +202,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (button.dataset.tabContent === tab.dataset.tabContent) {
 
                     tab.classList.add('active')
+
                 }
             })
+
         });
     });
 
@@ -276,6 +285,7 @@ document.addEventListener('DOMContentLoaded', function() {
     formHero.addEventListener('submit', (event) => {
         event.preventDefault();
         console.log("форма 'form-hero' отправлена!");
+        submitForm();
     });
 
 
@@ -283,6 +293,7 @@ document.addEventListener('DOMContentLoaded', function() {
     formAction.addEventListener('submit', (event) => {
         event.preventDefault();
         console.log("форма 'form-action' отправлена!");
+        submitForm();
     });
 
 
@@ -290,6 +301,7 @@ document.addEventListener('DOMContentLoaded', function() {
     formPrice.addEventListener('submit', (event) => {
         event.preventDefault();
         console.log("форма 'form-price' отправлена!");
+        submitForm();
     });
 
 
@@ -297,6 +309,7 @@ document.addEventListener('DOMContentLoaded', function() {
     formAnswers.addEventListener('submit', (event) => {
         event.preventDefault();
         console.log("форма 'form-answers' отправлена!");
+        submitForm();
     });
 
 
@@ -305,6 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
     freepriceForm.addEventListener('submit', (event) => {
         event.preventDefault();
         console.log("форма 'freeprice-form' отправлена!");
+        submitForm();
     });
 
 
@@ -313,6 +327,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
         elements_selector: ".lazy"
     });
+
+    function submitForm() {
+        // Get the first form with the name
+        // Hopefully there is only one, but there are more, select the correct index
+        var frms = document.querySelectorAll('form');
+        frms.forEach(element => {
+            //frm.submit(); // Submit
+            element.reset(); // Reset
+            return true; // Prevent page refresh
+        });
+        alert('Данные отправлены!');
+    }
+
+
+
+
+
+
+
+    //reviews slider
+    //new Swiper('.swiper-container');
+    new Swiper('.swiper-container', {
+        // Вывод стрелок навигации
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        // Вывод скроллбара
+        /*  scrollbar: {
+        	  el: '.swiper-scrollbar',
+        	  draggable: true
+         }, */
+        // бесконечный слайдер
+        loop: true,
+        // скорость прокрутки
+        speed: 600,
+        // отступ между слайдами
+        spaceBetween: 30,
+    })
+    myLazyLoad.update();
+    //lazyLoadInstance.update();
 
 
 
@@ -426,30 +484,6 @@ window.addEventListener("load", function() {
 
 
 
-    //reviews slider
-    //new Swiper('.swiper-container');
-    new Swiper('.swiper-container', {
-        // Вывод стрелок навигации
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        // Вывод скроллбара
-        /*  scrollbar: {
-             el: '.swiper-scrollbar',
-             draggable: true
-         }, */
-        // бесконечный слайдер
-        loop: true,
-        // скорость прокрутки
-        speed: 600,
-        // отступ между слайдами
-        spaceBetween: 30,
-    })
-
 
 });
 
@@ -517,3 +551,33 @@ smoothLink.addEventListener('click', function(e) {
     });
 
 });
+
+
+// yandex maps loading
+const sectionProfit = document.getElementById('profit');
+let contactsMap = document.getElementById('contacts-map');
+let mapLoaded = false;
+//console.log(sectionProfit);
+
+function scrollingLoadingMap() {
+    if (mapLoaded == false) {
+        window.addEventListener('scroll', loadingMap);
+        mapLoaded = true;
+    }
+    //console.log(mapLoaded);
+}
+
+function loadingMap() {
+    var pos = window.innerHeight;
+    let boxbottom = sectionProfit.getBoundingClientRect().bottom;
+
+    if (boxbottom < pos) {
+        contactsMap.classList.add('animate__animated', 'animate__zoomInUp', 'animate__delay-1s');
+        contactsMap.innerHTML = '<a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.ru/maps/213/moscow/house/grayvoronovskaya_ulitsa_20/Z04YcQRnSk0GQFtvfXtweHtkYA==/?ll=37.738204%2C55.719141&utm_medium=mapframe&utm_source=maps&z=16.8" style="color:#eee;font-size:12px;position:absolute;top:14px;">Грайвороновская улица, 20 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUJU4eH8C" width="100%" height="400" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>';
+
+        //console.log('Классы добавлены! Карта загружена!');
+        window.removeEventListener('scroll', loadingMap);
+    }
+}
+
+scrollingLoadingMap();

@@ -2133,6 +2133,10 @@ input.form-field__input--popup::placeholder {
     max-width: 979px;
 }
 
+.swiper-slide__pic {
+    display: block;
+}
+
 .swiper-slide__img {
     display: block;
     width: 100%;
@@ -2482,7 +2486,7 @@ form-field__placeholder--question
 .contacts-map {
     width: 100%;
     max-width: 100%;
-    /* height: 400px; */
+    height: 400px;
     --animate-duration: 3.0s;
 }
 
@@ -2525,6 +2529,18 @@ iframe {
 
 
 /*  */
+
+
+/* .ymap-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: url(/media/img/map.jpg) #fafafb no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+} */
 
 
 /*  */
