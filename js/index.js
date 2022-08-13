@@ -322,8 +322,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
+    //LazyLoad
+    const MmyLazyLoad = new LazyLoad({
 
-
+        elements_selector: ".lazy"
+    });
 
     function submitForm() {
         // Get the first form with the name
